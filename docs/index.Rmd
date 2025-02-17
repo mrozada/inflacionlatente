@@ -1,0 +1,409 @@
+---
+title: "INFLACIÓN LATENTE"
+author: "Martin Gonzalez-Rozada. <br> Director de la Maestría en Econometría del Departamento de Economía de la [Universidad Torcuato Di Tella](https://www.utdt.edu/)."
+date: "Enero 2025"
+output: rmdformats::downcute
+---
+  
+```{=html}
+<style>
+  p {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0px 0px 12px 0px;
+  }
+
+h1, h2, h3, h4, h5, h6, legend {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  color: #9F2042;
+}
+</style>
+```
+
+```{r setup, include=FALSE, echo=FALSE, message=FALSE,warning = FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      warnings = FALSE,
+                      message = FALSE,
+                      engine.path = "C:/Program Files/Stata17/StataMP-64.exe",
+                      root.dir = "C:/Users/mrozada/Dropbox/Personal Stuff/IPC seasonal adjustment"
+                      #root.dir = "C:/Users/fiona/Dropbox/MGR/IPC seasonal adjustment"
+)
+
+options(knitr.kable.NA = '')
+library(tidyverse)
+library(scales)
+library(kableExtra)
+library(plotly)
+library(knitr)
+library(readxl)
+#library("ggpmisc")
+library("ggh4x")
+```
+
+
+```{r fechas_para_texto, message=FALSE,echo=FALSE}
+# Importo los datos:
+
+## Importo fecha: yearactual=anio del informe, mesactual=mes del informe
+
+### Anio
+year_t <- as.numeric(read_excel(paste0(wd,"/Excels/IPCLatentePond.xlsx"), 
+    sheet = "Cuadro1", range = "c4", col_names = FALSE))
+
+### Mes actual 
+mes_t <- as.numeric(read_excel(paste0(wd,"/Excels/IPCLatentePond.xlsx"),
+    sheet = "Cuadro1", range = "c3", col_names = FALSE))
+
+### Mes anterior
+mes_tm1 <- as.numeric(read_excel(paste0(wd,"/Excels/IPCLatentePond.xlsx"),
+    sheet = "Cuadro1", range = "j5", col_names = FALSE))
+
+### Seleccion anio anterior
+if(mes_t - mes_tm1 == 1){
+  year_tm1 <- year_t
+} else if (mes_t - mes_tm1 == -11){
+  year_tm1 <- year_t-1
+} else {
+  year_tm1 <- "ERROR EN EL ANIO DEL MES PREVIO" 
+}
+
+### Año pasado
+year_tm12 <- year_t - 1
+
+### Lista de meses 
+meses <- read_excel(paste0(wd,"/Excels/IPCLatentePond.xlsx"),
+    sheet = "Cuadro1", range = "r15:r26", 
+    col_names = FALSE)
+
+### Lista de "meses anteriores" 
+meses_anterior <- read_excel(paste0(wd,"/Excels/IPCLatentePond.xlsx"),
+    sheet = "Cuadro1", range = "s15:s26", 
+    col_names = FALSE)
+
+# Textos
+mes_t_abrev <- paste0(str_to_title(substr(meses[mes_t,1],1,3),"."))
+text_mes_yoy <-  paste(mes_t_abrev,year_t,"/",mes_t_abrev,year_tm12)
+
+```
+
+```{r datos_excel, message=FALSE,echo=FALSE}
+
+## Cuadro 1
+cuadro1 <- read_excel(paste0(wd,"/Excels/IPCLatentePond.xlsx"),
+                      sheet = "Cuadro1", range = "E40:L61", 
+                      na = "NA")
+colnames1 <- colnames(cuadro1)
+colnames1[1] <- " "
+colnames(cuadro1) <- colnames1
+
+## Cuadro 2
+cuadro2 <- read_excel(paste0(wd,"/Excels/IPCLatentePond.xlsx"),
+                      sheet = "Cuadro2", 
+                      range = "D13:K46")
+
+# ## Figura 1: tasa mensual por region
+# 
+# figura1 <- read_excel(paste0(wd,"/Excels/IPCLatentePond.xlsx"),
+#                       sheet = "Figura1", 
+#                       range = "D47:G61")
+# 
+# ## Figura 2: tasa mensual por division
+# 
+# figura2 <- read_excel(paste0(wd,"/Excels/IPCLatentePond.xlsx"),
+#                       sheet = "Figura1", 
+#                       range = "D63:F87")
+
+## Figura 3: tasa mensual serie de tiempo
+figura3 <- read_excel(paste0(wd,"/Excels/IPCLatentePond.xlsx"),
+                      sheet = "LinePlot", 
+                      range = "A1:C2000")
+library(tsbox)
+figura3long <- figura3 %>%
+  na.omit() %>%
+  ts_long() %>%
+  rename(Serie = id) %>%
+  rename(Tasa = value)
+library(tsbox) # la saco porque sino me reutiliza otra funcion que me sirve
+##en realidad deberia usar :: pero if it ain't broke don't fix it 
+
+# Figura de barritas para la inflación mensual en cada región
+datos_figura_regiones <- read_excel(paste0(wd,"/Excels/IPCLatentePond.xlsx"),
+                      sheet = "FigurasR", 
+                      range = "B7:E14") %>%
+  arrange((INDEC))
+
+# Figura de barritas para la inflación interanual nacional
+datos_figura_interanual <- read_excel(paste0(wd,"/Excels/IPCLatentePond.xlsx"),
+                      sheet = "FigurasR", 
+                      range = "K7:M19")
+datos_figura_interanual$Fecha <- lubridate::ymd(datos_figura_interanual$Fecha)
+
+
+```
+
+
+
+```{r datos_figuras, message=FALSE,echo=FALSE,include=FALSE}
+
+# Figura: inflacion mensual serie de tiempo 
+fg3 <- figura3long %>%
+  mutate_if(is.numeric, ~round(.,2)) 
+  
+fg3t <- figura3 %>%
+  na.omit() %>%
+  tail(n=1) %>%
+  mutate_if(is.numeric, ~sprintf("%.1f",round(.,1)))
+
+```
+
+
+## INTRODUCCIÓN
+
+El Índice de Precios al Consumidor (IPC) es un índice que mide el valor de una canasta de bienes y servicios representativos del gasto de consumo de los hogares residentes en áreas urbanas. La práctica usual en este tipo de índices es medir las variaciones de precios de cada bien y servicio y utilizar la estructura de gasto de algún período inicial.  
+
+En Argentina, los datos oficiales utilizan la estructura de gastos de consumo de la Encuesta Nacional de Gasto de los Hogares (ENGHo) de 2004-2005. Con esta encuesta se calculan ponderadores para cada bien y servicio de la canasta del IPC. Sin embargo, la última edición de la ENGHo es la que se realizó entre noviembre de 2017 y noviembre de 2018. 
+
+En este informe estimamos la inflación actualizando  los ponderadores y el año base del IPC con la ENGHo que se realizó entre noviembre de 2017 y noviembre de 2018. El trabajo de actualización de la base del IPC es bastante complejo. Aquí se intenta aproximar lo que podría haber sido el efecto de la actualización sobre las tasas de inflación utilizando sólo la información disponible públicamente. Para hacer el cambio de base se necesitan los precios de todos los productos que componen la canasta y estos no son públicos. Las estimaciones que se presentan aquí trabajan con los índices de las 12 divisiones de la Clasificación del Consumo Individual por Finalidades
+(CCIF) 1999 de Naciones Unidas, conocida como COICOP por sus siglas en inglés, (y los índices de las categorías que componen alguna de esas divisiones) como si fueran precios. Al usar los índices por división que están calculados usando la estructura de gasto de los hogares de la ENGHo 2004-2005 hay cierta contaminación en estas estimaciones. Por otro lado, hay ciertos bienes y servicios que integrarían la canasta del IPC con la estructura de gasto de los hogares de 2017-2018 cuyos precios no se relevan porque no aparecian en la canasta de 2004-2005, por ejemplo, el servicio de *streaming* o el café en cápsulas y hay otros bienes como disquetes, CD Room y DVD o servicios de alquiler de películas de video que dejaron de integrar la canasta por haber desaparecido entre 2004-2005 y 2017-2018. No obstente, con los datos públicos es lo mejor que se puede hacer para actualizar los ponderadores por división (categoría) y por región con la ENGHo 2017-2018. 
+
+**Definimos este indicador que pondera los índices de precios por division (categoría) y por región como IPC Latente (IPCL).** Así, la **Inflación Latente** es una estimación de la tasa de aumento de los precios de un conjunto de bienes y servicios representativos del gasto de consumo de los hogares residentes en áreas urbanas durante el período que va desde noviembre de 2017 hasta noviembre de 2018. El año base o período de referencia del índice debería preceder inmediatamente a la introducción de la nueva serie del IPC (Consumer price index manual, IMF, 2020) por lo que se toma como año base del IPC Latente (IPCL) 2023=100.
+
+
+## RESULTADOS
+ 
+### Inflación Latente
+
+**El Índice de Precios al Consumidor Latente, a nivel nacional (IPCL) aumentó un `r cuadro1[2,7]` por ciento en `r meses[mes_t,1]`, luego de haber aumentado un `r cuadro1[2,6]` por ciento en `r meses[mes_tm1,1]` impulsado por el aumento de precios de la división de Vivienda, Agua, Electricidad, Gas y Otros Combustibles que explicó alrededor del 33 por ciento de la inflación.** (Cuadros 1 y 2). En comparación, la tasa de inflación mensual oficial publicada por el INDEC fue de `r sprintf("%.1f",cuadro1[21,7])` (Cuadro 1 y Figura 1). A diferencia de la inflación latente el aumento de la inflación oficial estuvo motorizada por el aumento de precios de la división de Restaurantes y hoteles, seguida de cerca de la división de Alimentos y Bebidas no Alcohólicas. 
+
+**Durante los últimos 12 meses, la inflación interanual fue de `r sprintf("%.1f",cuadro1[2,8])`, comparado con el valor de `r sprintf("%.1f",cuadro1[21,8])` en los datos oficiales** (Cuadro 1 y Figura 2). Al igual que con las incidencias mensuales la inflación latente interanual se explica por el aumento de precios de la  división de Vivienda, Agua, Electricidad, Gas y Otros Combustibles mientras que la incidencia de la división de Alimentos y Bebidas no Alcohólicas explicó la mayor parte de de la inflación interanual en la medición oficial. **Las divisiones de Vivienda, Agua, Electricidad, Gas y Otros Combustibles, Alimentos y Bebidas Alcohólicas y Transporte explicaron más del 55 por ciento del aumento interanual en el nivel general de la inflación latente** (Cuadro 2).  Mientras tanto, las mismas divisiones en la medición oficial explicar apenas más del 50 por ciento, con un peso relativo de Alimentos y Bebidas no Alcohólicas mucho mayor, casi un cuarto de la inflación interanual nacional.<br>
+
+
+[**Figura 1. Tasa de inflación mensual desde enero de 2025**]{style="color:#777;font-size:13    .0pt;"}
+
+```{r lineplot, warning=FALSE, message=FALSE,echo=FALSE}
+
+g3text1 <- paste("Última observación:")
+g3text2 <- paste(str_to_title(meses[mes_t,1], locale = "es"), year_t, sep=" ")
+g3text3 <- paste("INDEC: ", fg3t[3])
+g3text4 <- paste("IPC Latente: ", fg3t[2])
+
+max_text_fg3 <- floor(max(fg3$Tasa))
+step_text_fg3 <- max_text_fg3/20
+
+
+  g3d <- ggplot(data=fg3, aes(x=Fecha, y=Tasa)) +
+    geom_line(
+      aes(
+        x=Fecha,
+        color=Serie
+    ), linewidth=.8) +
+    scale_color_manual(values=c("#111C7F","#90d14b"))+
+    theme_bw() +
+    labs(y="Tasa de inflación mensual", x=" ") +
+  geom_text(aes(x = as.POSIXct("2024-11-01"), y=max_text_fg3),label=g3text1)+
+  geom_text(aes(x = as.POSIXct("2024-11-01"), y=max_text_fg3-1*step_text_fg3),label=g3text2)+
+  geom_text(aes(x = as.POSIXct("2024-11-01"), y=max_text_fg3-2*step_text_fg3),label=g3text3,color="#111C7F")+
+  geom_text(aes(x = as.POSIXct("2024-11-01"), y=max_text_fg3-3*step_text_fg3),label=g3text4,color="#90d14b")
+
+  ggplotly(g3d, height = 400)
+  
+```
+
+
+```{r mirar_regiones, message=FALSE,echo=FALSE, include=FALSE}
+# Que region tuvo mas inflacion? cargar datos indec en mismo orden para hacer la resta
+cuadro1[3:8,c(1,7)] %>% arrange(desc(.[[2]]))
+ 
+datos_figura_regiones %>% mutate(Dif = IPCL-INDEC) %>% select(-Color) %>% arrange(desc(.[[4]]))
+# La primera frase en bold hay que escribirla cada vez porque no es algo sistemático. 
+# La parte de mayor y menor si se puede automatizar. diferencia en valor absoluto? y comentar otras 
+```
+
+**Durante `r meses[mes_t,1]`, todas las regiones registraron una tasa de inflación latente mayor a la medición oficial, con diferencias entre 0 y 0.4 puntos porcentuales.** La mayor diferencia se dio en la región Pampeana, donde la tasa de inflación latente fue 0.41 puntos porcentuales más alta que la medición oficial, seguida de las regiones Noreste y Noroeste, con diferencias alrededor de los 0.30 puntos porcentuales. La región GBA fue la única que registró una medición latente de inflación marginalmente menor a la medición latente (Figura 2).<br>
+
+[**Figura 2. Tasa de inflación mensual e interanual. Oficial y Latente**]{style="color:#777;font-size:13    .0pt;"}
+
+```{r figura_regiones, warning=FALSE, message=FALSE,echo=FALSE}
+
+g_reg <- ggplot(datos_figura_regiones, 
+                aes(x = reorder(Region, -INDEC), 
+                    text = paste("Region:", Region))) +
+  geom_bar(aes(y = INDEC, fill = as.factor(Color),
+               text = paste("Region:", Region, 
+                            "<br>Inflación INDEC:", sprintf("%.1f", INDEC))), 
+           stat = "identity", 
+           width = 0.6) +
+  geom_point(aes(y = IPCL, 
+                 text = paste("Region:", Region, 
+                              "<br>Inflación IPCL:", sprintf("%.1f", IPCL))), 
+             color = "#90d14b", 
+             size = 5) +
+  scale_y_continuous(limits = c(0, max(datos_figura_regiones$IPCL) + 0.5), 
+                     labels = function(x) sprintf("%.1f", x)) +
+  scale_fill_manual(values = c("0" = "#111C7F", "1" = "#4d57b0")) +
+  labs(title = "Tasa de inflación mensual por región", 
+       y = "Puntos porcentuales", 
+       x = "Región") +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5),
+        legend.position = "none")
+
+ggplotly(g_reg, tooltip = "text", height = 400)
+```
+
+```{r figura_interanual, warning=FALSE , message=FALSE,echo=FALSE}
+g_yoy <- ggplot(datos_figura_interanual, aes(x=Fecha)) +
+  geom_bar(aes(y = INDEC,
+               text = paste("Mes:", Fecha, 
+                            "<br>Inflación INDEC:", sprintf("%.1f", INDEC))),
+           fill = "#111C7F", stat = "identity", width = 20,) +
+  geom_point(aes(y = IPCL,
+                 text = paste("Mes:", Fecha, 
+                              "<br>Inflación IPCL:", sprintf("%.1f", IPCL))),
+             color = "#90d14b", size = 5) +
+  labs(title = "Tasa de inflación interanual", 
+       y = "Puntos porcentuales", 
+       x = "Fecha") +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# g_yoy
+ggplotly(g_yoy,  tooltip = "text", height = 400)
+```
+
+
+```{r mirar_divisiones_altas, message=FALSE,echo=FALSE, include=FALSE}
+# Que region tuvo mas inflacion? cargar datos indec en mismo orden para hacer la resta
+cuadro1[9:20,c(1,7)] %>% arrange(desc(.[[2]]))
+
+# Las dos primeras oraciones se pueden automatizar, la de los otros no.
+```
+
+```{r mirar_divisiones_bajas, message=FALSE,echo=FALSE, include=FALSE}
+# Que region tuvo mas inflacion? cargar datos indec en mismo orden para hacer la resta
+cuadro1[9:20,c(1,7)] %>% arrange(desc(.[[2]]))
+
+# Las dos primeras oraciones se pueden automatizar, la de los otros no.
+```
+
+
+**El índice de precios de Restaurantes y Hoteles fue el que más aumentó en el mes, con un incremento de `r sprintf("%.1f",unlist(cuadro1[8+which.max(unlist(cuadro1[9:20,7])),7]))` por ciento.** En segundo lugar en los aumentos está el índice de precios latente de Vivienda, Agua, Electricidad, Gas y Otros Combustibles, cuyo incremento fue de `r sprintf("%.1f",cuadro1[12,7])` por ciento. En un segundo escalón, ambos con aumentos de 2.5 por ciento, se ubican los aumentos en los índices de precios de Recreación y Cultura y Bienes y Servicios Varios.  
+
+**El índice de precios de `r unlist(cuadro1[8+which.min(unlist(cuadro1[9:20,7])),1])` fue el único índice que registró una baja de precios, con una variación de `r unlist(cuadro1[8+which.min(unlist(cuadro1[9:20,7])),7])` por ciento.** Luego, el menor aumento fue el del índice de precios de Educación, cuyo aumento en la medición latente fue de `r cuadro1[18,7]` por ciento (Cuadro 1).<br>
+
+------------------------------------------------------------------------
+
+<br>
+
+```{r cuadro1, echo=FALSE, message=FALSE}
+  colnames(cuadro1)[8] <- "  "
+  
+  # Tengo que automatizar la barrita de la linea 208 
+  
+  cuadro1 %>%   
+    slice(-1) %>%
+    kable(caption = "**Cuadro 1.  Cambios porcentuales en el IPC Latente**", digits=1, align = c('l',rep('c',times=7))) %>%
+    row_spec(1,bold=TRUE) %>% 
+    group_rows("Regiones", 2,7) %>%
+    group_rows("Divisiones COICOP", 8,19) %>%
+    group_rows("INDEC", 20,20) %>%
+    column_spec(column=1:8, extra_css = "vertical- align:middle;") %>%
+    kable_styling() %>%
+    # add_header_above(c("Año"=1, "2024"=5, "2025"=1, setNames(1,text_mes_yoy))) %>%
+    add_header_above(c("Año"=1, "2024"=6, setNames(1,text_mes_yoy))) %>%
+    add_header_above(c("Inflación Latente" = 1, "Variación mensual" = 6, "Variación interanual" = 1)) %>%
+    add_footnote("Nota: Elaboración propia en base a datos del Índice de Precios al Consumidor y Encuesta Nacional de Gastos de los Hogares 2017-2018 de INDEC.", notation = "symbol")
+```
+
+<br>
+
+------------------------------------------------------------------------
+
+
+### Incidencias enero 2025 
+
+```{r incidencia_mensual, echo=FALSE, message=FALSE, include=FALSE}
+cuadro2[5:16,]
+data.frame(cuadro2[5:16,1] , cuadro2[5:16,-1] / colSums(cuadro2[5:16,-1])) %>% arrange(desc(Nacional))
+
+#notar que las regiones son:
+# cuadro2[5:16,-1] %>% colSums()
+
+# Este parrafo es bastante artesanal porque habla de particularidades de la incidencia en cada región 
+```
+
+**La contribución más importante al dato del nivel general del IPCL de `r meses [mes_t,1]` la hizo el índice de precios de la división Vivienda, Agua, Electricidad, Gas y Otros Combustibles explicando alrededor de `r round(100*cuadro2[8,8]/cuadro2[2,8],1)` por ciento del `r cuadro1[2,7]` por ciento de inflación.** Este índice tuvo la mayor incidencia en la inflación latente en todas las regiones del país, explicando entre 20.8 por ciento en GBA y hasta 43.0 en la región Pampeana. Durante `r meses[mes_t,1]`, la segunda contribución más grande a la tasa de inflación mensual fue la del índice de Restaurantes y hoteles, explicando un 14.5 por ciento de la tasa de inflación mensual, con más peso en GBA, donde explica 18.8 por ciento, que en el resto de las regiones, donde explica entre 8 y 13 por ciento. La división de Alimentos y bebidas no alcohólicas fue la tercera división con mayor incidencia, habiendo explicado 14.4 por ciento de la inflación mensual, con un comportamiento dispar entre regiones --explica desde 9.9 por ciento a 18.2 por ciento--. Estas tres divisiones explican más de 60 por ciento de la inflación del mes de `r meses[mes_t,1]`. (Cuadro 2). <br>
+
+
+```{r incidencia_interanual, echo=FALSE, message=FALSE, include=FALSE}
+cuadro2[22:33,]
+
+data.frame(cuadro2[22:33,1] , cuadro2[22:33,-1] / colSums(cuadro2[22:33,-1])) %>% arrange(desc(Nacional))
+#notar que las regiones son:
+# cuadro2[22:33,-1] %>% colSums()
+```
+
+**En la comparación interanual, `r meses[mes_t,1]` de `r year_t` contra `r meses[mes_t,1]` de `r year_t - 1`, más del 55 por ciento del aumento de `r cuadro1[2,8]` por ciento está explicado por los índices de precios de tres de las divisiones de la canasta: Vivienda, Agua, Electricidad, Gas y Otros Combustibles, Alimentos y Bebidas no Alcohólicas y Transporte.** Cada una de estas divisiones contribuyó 26.0, 15 y 13.4 puntos porcentuales, respectivamente. Recreación y Cultura, con una incidencia interanual de `r sprintf("%.1f", cuadro2[30,8])` puntos porcentuales, y Comunicación, con `r sprintf("%.1f",cuadro2[29,8])` puntos porcentuales, son las divisiones que le siguen en la explicación del aumento interanual del nivel general de precios latente (Cuadro 2).<br>
+
+
+------------------------------------------------------------------------
+
+<br>
+
+```{r cuadro2, echo=FALSE, message=FALSE}
+  colnames2 <- colnames(cuadro2)
+  colnames2[1] <- " "  
+  colnames(cuadro2) <- colnames2
+    
+  cuadro2 %>%   
+    slice(c(2,5:17,19,22:33)) %>%
+    kable(caption = "**Cuadro 2. Incidencia de cada división en la Inflación Latente**",
+          digits=2, align = c('l',rep('c',times=7))) %>%
+    row_spec(c(1,15),bold=TRUE) %>% 
+    kable_styling() %>%
+    group_rows("Incidencia mensual", 1,14) %>%
+    group_rows("Incidencia interanual", 15,27) %>%
+    add_footnote("Nota: los ponderadores de los índices de precios de las divisiones para el cálculo de las incidencias del IPC nacional se construyeron como promedio ponderado de las ponderaciones regionales al no existir ponderadores oficiales. Debido a esto, el resultado de la suma de las incidencias da un valor aproximado a la inflación del nivel general.",notation="symbol")
+  
+```
+
+
+### Ciudad Autónoma de Buenos Aires (CABA) vs. Gran Buenos Aires (GBA)
+
+La tasa de inflación de CABA, que actualizó sus ponderadores con la ENGHo 2017-2018, fue de 3.1 por ciento en enero comparada con una tasa de inflación, oficial y latente, de alrededor del 2 por ciento. ¿Cómo se explica esa diferencia? Además del hecho resaltado arriba de precios de ciertos bienes y servicios que se relevan en CABA pero que no se relevan en ninguna de las otras dos mediciones, oficial y latente (ya dimos el ejemplo del precio del servicio de *streaming*, el alquiler de películas de video etc.) por usar diferentes ENGHo, la explicación también tiene que ver con la estructura de gastos de los hogares de CABA comparada con la estructura de gastos de la región del GBA, medida con la ENGHo 2004-2005 o la 2017-2018 y el cambio de precios en ambas jurisdicciones. **Cuando se compara CABA con la inflación oficial de enero en GBA la mayor diferencia en el aumento de precios se dió en la división de Transporte donde el aumento fue de 3.9 por ciento para los hogares de CABA mientras que para la región del GBA los precios de esta división aumentaron menos de 1 por ciento.** Aquí la explicación tiene que ver con el aumento del precio de los pasajes aéreos que en CBA aumentaron 37.1 por ciento durante el mes de enero. El aumento de precios en Transporte tuvo una incidencia de 0.42 puntos porcentuales en CABA y de solo 0.1 puntos porcentuales de GBA. **La estructura de gastos de los hogares es diferente en esas jurisdicciones, por ejemplo, el ponderador de la división de Vivienda, Agua, Electricidad, Gas y Otros Combustibles es 7 puntos porcentuales más alto en CABA que en GBA (17.5 por ciento vesrus 10.5 por ciento). Entonces el aumento de precios de esta división pesa más en la inflación de CABA que en la de GBA. Como durante enero la inflación de esta división fue 3.1 por ciento en CABA y 2.2 por ciento en GBA eso influyó para que el nivel general de la inflación en CABA sea más alto.** La incidencia de los precios de esta división fue mayor en CABA (0.6 puntos porcentuales) que en GBA  (0.22 puntos porcentuales). En el mismo sentido, **la inflación de la división de Recreación y Cultura fue de 7.7 por ciento en CABA mientras que fue solo de 2.7 por ciento en GBA.** El aumento en CABA estuvo impulsado por el incremento de precios de los paquetes turísticos que aumentaron casi 28 por ciento en enero. Esta diferencia provocó que la incidencia de esta división en enro en CABA fuera el doble que en GBA (0.40 versus 0.20 puntos porcentuales). La incidencia de la división de Prendas de vestir y calzado, que tuvo deflación durante enero en ambas jurisdicciones, indujo una mayor reducción de la inflación en GBA que en la inflacion oficial de CABA (-0.18 versus -0.04 puntos porcentuales). En el resto de las divisiones el cambio de precios durante enero fue similar en CABA y en GBA. Todo esto contribuyó a que la tasa de inflación en CABA fuera más alta que en GBA.
+
+
+### Gran Buenos Aires (GBA): medición oficial vs. latente
+
+La tasa de inflación latente y la medición oficial en GBA fue similar y en este caso la explicación tiene que ver fundamentalmente con que la estructura de gasto de los hogares de la ENGHo 2017-2018 aumentó los ponderadores de las divisiones que tuvieron menores aumentos de precios y disminuyó los ponderadores de las divisiones que tuviero mayor inflación. En los datos de la inflación latente de enero la división que incrementó sus precios bien por encima del nivel general fue Restaurantes y hoteles, alrededor de 5 por ciento. Esta división tiene un ponderador de 7.4 puntos porcentuales implicando un impacto acotado en el nivel general de la inflación latente. Por otro lado, Transporte que tuvo una inflación latente de menos de 1 por ciento, por debajo del nivel general, tiene un ponderador de 13.8 puntos porcentuales sugiriendo un mayor efecto sobre el nivel general de la inflación latente. En el mismo sentido el aumento de precios de la división de Equipamiento y mantenimiento del hogar, 1.6 por ciento, casi que compensa la deflación de la división de Prendas de vestir y Calzado de -2.1 por ciento al tener ponderadores parecidos. El aumento de precios de la división de Vivienda, Agua, Electricidad, gas y Otros Combustibles que estuvo un poco por encima del nivel general se compensó con el aumento de precios en Alimentos y Bebidas no Alcohólicas que estuvo por debajo del nivel general. Todos estos factores contribuyeron a que la inflación latente fuer alrededor del 2 por ciento en enero en la región de GBA. 
+
+En los datos oficiales pasó algo similar. El aumento de la incidencia de la división de Recreación y Cultura durante enero compensó la caída en Prendas de vestir y calzado. Educación, Comunicación, Bebidas alcohólicas y tabaco y Equipamiento y mantenimiento del hogar todas tuvieron incidencias pequeñas entre 0.01 y 0.09 puntos porcentuales. Casi el 70 por ciento del aumento del nivel general de la inflación oficial en GBA se explica por el comportamiento de tres divisiones: Restaurantes y Hoteles, Alimentos y Bebidas no Alcohólicas y Salud.
+
+## NOTA TECNICA
+
+### Breve explicación del IPC Latente
+
+El Índice de Precios al Consumidor (IPC) que publica mensualmente el Instituto de Estadística y Censos (INDEC) mide el cambio en los precios de una canasta de bienes y servicios adquiridos por los consumidores urbanos. El índice mide cambios de precios con respecto a una fecha de referencia. La fecha de referencia es diciembre de 2016 donde el IPC vale 100. En Argentina, los datos oficiales utilizan la estructura de gastos de consumo de la Encuesta Nacional de Gasto de los Hogares (ENGHo) de 2004-2005, ajustada por precios relativos hasta la fecha de creación del índice. 
+
+El IPC Latente se construye utilizando la Encuesta Nacional de Gasto de los Hogares de 2017-2018 y la información que publica el INDEC sobre las aperturas del Índice de Precios al Consumidor. En particular, con respecto a la información de los índices de precios se utiliza la información correspondiente a las divisiones. El IPC Latente usa 2023 como el año base. Para computar el IPCL se utiliza las siguiente fórmula sobre las doce divisiones en cada región:
+
+$$
+IPCL^{r,j}_t = \sum_{j=1}^{12}  w^{r,j}_{17} \cdot \frac{P^{r,j}_t}{P^{r,j}_{base}}
+$$
+donde $P^{r,j}_t$ son los "precios" en cada región $r$ en el período $t$. Las estimaciones que se presentan aquí trabajan con los índices de las 12 categorías de la COICOP como si fueran precios;  Cada $w^{r,j}_{17}$ es el ponderador de la división $j$ para la región $r$ usando la estructura en gasto de la ENGHo 2017-2018 y $P^{r,j}_{base}$ es el precio de esa división y región en el período base. 
+
+En los casos que es posible, se reemplazan las divisiones por la reconstrucción de las divisiones usando los datos de los índices de precios para los grupos o clases y los ponderadores actualizados. Las divisiones que se pueden reconstruir con la información disponibles son: Alimentos y bebidas no alcohólicas, Bebidas alcohólicas y tabaco, Prendas de vestir y calzado, y Transporte. En el caso de Alimentos y bebidas no alcohólicas se excluyen los índices de precios de las clases Pescados y mariscos y Otros alimentos dado que no son publicados por INDEC. Para obtener ponderadores actualizados se computa el gasto total por región en cada división, grupo y clase correspondiente, y se computa el ratio de cada uno de estos con respecto al gasto total por región. A su vez se computa ratio del gasto total por región con respecto al gasto total nacional para obtener el ponderador de cada región.
+
+Luego, se computan los índices a nivel nacional ponderando los datos de las regiones para cada división $j$ y para el Nivel General. 
+$$
+IPCL^j_t = \sum_{r=1}^{6}  w^{r,j}_{17} \cdot IPCL^{r,j}_t
+$$
+Finalmente se calcula la tasa de inflación mensual para como 
+
+$$
+1 + \pi_t = \frac{IPCL_t}{IPCL_{t-1}} -1
+$$
+y de forma análoga para cada región y división. 
+
+La elección del año base no es trivial, sino que afecta a los valores de la tasa de inflación resultante. En líneas generales, a partir de la ecuación que computa el $IPCL^{r,j}$, se puede notar que el nivel de precios del año base tiene un efecto directo en el valor del índice.  Esto ocurre por utilización de *ponderadores* para la construcción del índice en vez de un índice de Laspeyres usual que mida el valor de una canasta de gasto utilizando "precios de cada período con *cantidades* del período base". Para más información sobre el efecto del año base en la tasa de inflación mensual e interanual, revisar [este link](https://x.com/MartinGRozada/status/1881320943467081896). 
