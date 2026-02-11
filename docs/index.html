@@ -8,7 +8,7 @@
         <meta name="author" content="Martin Gonzalez-Rozada.   Director de la Maestría en Econometría del Departamento de Economía de la Universidad Torcuato Di Tella." />
     
     
-    <title>INFLACIÓN LATENTE</title>
+    <title>INFLACIÓN ACTUALIZADA</title>
 
         <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -3648,16 +3648,16 @@ margin-left: 0 !important;
    
    
         
-      <h1 class="title">INFLACIÓN LATENTE</h1>
+      <h1 class="title">INFLACIÓN ACTUALIZADA</h1>
       
       <p class="authors">
            <span class="glyphicon glyphicon-user"></span> Martin
 Gonzalez-Rozada. <br> Director de la Maestría en Econometría del
 Departamento de Economía de la <a href="https://www.utdt.edu/">Universidad Torcuato Di Tella</a>.
       </p>
-         <p class="date"><span class="glyphicon glyphicon-calendar"></span> Diciembre
-2025. <br> <strong><em>2025 - Año de la Primera
-Estrella</em></strong></p>
+         <p class="date"><span class="glyphicon glyphicon-calendar"></span> Enero
+2026. <br> <strong><em>2025 - Año de la Primera Estrella</em></strong>
+<br> <strong><em>2026 - Del Barrio al Continente</em></strong></p>
            
 
    
@@ -3690,116 +3690,123 @@ consumo de la Encuesta Nacional de Gasto de los Hogares (ENGHo) de
 servicio de la canasta del IPC. Sin embargo, la última edición de la
 ENGHo es la que se realizó entre noviembre de 2017 y noviembre de
 2018.</p>
-<p>En este informe estimamos la inflación actualizando los ponderadores
-y el año base del IPC con la ENGHo que se realizó entre noviembre de
-2017 y noviembre de 2018. El trabajo de actualización de la base del IPC
-es bastante complejo. Aquí se intenta aproximar lo que podría haber sido
-el efecto de la actualización sobre las tasas de inflación utilizando
-sólo la información disponible públicamente. Para hacer el cambio de
-base se necesitan los precios de todos los productos que componen la
-canasta y estos no son públicos. Las estimaciones que se presentan aquí
-trabajan con los índices de las 12 divisiones de la Clasificación del
-Consumo Individual por Finalidades (CCIF) 1999 de Naciones Unidas,
-conocida como COICOP por sus siglas en inglés, (y los índices de las
-categorías que componen alguna de esas divisiones) como si fueran
-precios. Al usar los índices por división que están calculados usando la
-estructura de gasto de los hogares de la ENGHo 2004-2005 hay cierta
-contaminación en estas estimaciones. Por otro lado, hay ciertos bienes y
-servicios que integrarían la canasta del IPC con la estructura de gasto
-de los hogares de 2017-2018 cuyos precios no se relevan porque no
-aparecian en la canasta de 2004-2005, por ejemplo, el servicio de
-<em>streaming</em> o el café en cápsulas y hay otros bienes como
-disquetes, CD Room y DVD o servicios de alquiler de películas de video
-que dejaron de integrar la canasta por haber desaparecido entre
-2004-2005 y 2017-2018. No obstente, con los datos públicos es lo mejor
-que se puede hacer para actualizar los ponderadores por división
-(categoría) y por región con la ENGHo 2017-2018.</p>
-<p><strong>Definimos este indicador que pondera los índices de precios
-por division (categoría) y por región como IPC Latente (IPCL).</strong>
-Así, la <strong>Inflación Latente</strong> es una estimación de la tasa
-de aumento de los precios de un conjunto de bienes y servicios
+<p>La actualización del IPC a ponderadores basados en la ENGHo 2017-18
+fue postergada indefinidamente por el gobierno en enero de 2026, tras la
+renuncia de Marco Lavagna como director del INDEC. El Fondo Monetario
+Internacional había requerido explícitamente esta actualización en su
+Staff Report de agosto de 2024.</p>
+<p>El <strong>IPC Actualizado</strong> utiliza los mismos precios que
+releva INDEC para la canasta vigente, pero los repondera con la
+estructura de gasto de la ENGHo 2017-18. Esta reponderación captura el
+grueso de la distorsión: con ponderadores actualizados y base 2025=100,
+la inflación de 2024 hubiera sido 125,5% en lugar de 117,8% (+7,7 puntos
+porcentuales).</p>
+<p>Sin embargo, el <strong>IPC Actualizado</strong> tiene una limitación
+inherente: no puede incorporar productos que aparecieron en la ENGHo
+2017-18 pero que no forman parte de la canasta de precios del IPC
+vigente (streaming, cápsulas de café, etc.), porque INDEC no publica sus
+precios. Estos productos nuevos sin precio representan menos de 0,1% del
+gasto total de los hogares. Aun bajo supuestos extremos de variación de
+precios de estos productos, su omisión no podría generar un sesgo
+superior a unas pocas décimas de un punto porcentual en la inflación
+anual, magnitud de segundo orden frente a los 7,7pp que genera la
+diferencia de ponderadores por división. El IPC Actualizado constituye
+una buena aproximación al IPC que INDEC hubiera publicado con canasta
+actualizada (ver el documento <strong><a href="https://github.com/mrozada/mrozada.github.io/blob/master/assets/pdf/informe_sesgo_obsolescencia_IPC.pdf">Sesgo
+de obsolescencia en la canasta del IPC INDEC</a></strong> para una
+cuantificación completa).</p>
+<p>Definimos este indicador que pondera los índices de precios por
+división (categoría) y por región como <strong>IPC Actualizado
+(IPCA)</strong>. Así, la Inflación Actualizada es una estimación de la
+tasa de aumento de los precios de un conjunto de bienes y servicios
 representativos del gasto de consumo de los hogares residentes en áreas
 urbanas durante el período que va desde noviembre de 2017 hasta
 noviembre de 2018. El año base o período de referencia del índice
 debería preceder inmediatamente a la introducción de la nueva serie del
-IPC (Consumer price index manual, IMF, 2020) por lo que se toma como año
-base del IPC Latente (IPCL) 2023=100.</p>
+IPC (Consumer price index manual, IMF, 2020) como INDEC iba a utilizar
+como año base 2025=100 el IPCA toma el mismo año base de forma tal de
+tratar de aproximarse lo más posible al valor de la inflación que INDEC
+iba a publicar a partir del 10 de febrero de 2026. Por cuestiones
+legales, cada vez que INDEC, o alguna agencia estadística de otro país,
+actualiza la canasta de su IPC la inflación con esta nueva canasta se
+publica desde que sale hacia adelante y se hace un empalme hacia atrás
+para mantener sin cambios la inflación publicada con la vieja canasta.
+El IPC Actualizado adopta la misma estrategia, comienza a medir la
+inflación con los ponderadores actualizados a partir de enero 2026 y
+empalma hacia atrás con la inflación oficial publicada por INDEC.</p>
 </div>
 <div id="resultados" class="section level2">
 <h2>RESULTADOS</h2>
-<div id="inflación-latente" class="section level3">
-<h3>Inflación Latente</h3>
-<p><strong>El nivel general del Índice de Precios al Consumidor Latente
-(IPCL) aumentó un 3 por ciento en diciembre, luego de haber aumentado un
-2.7 por ciento en noviembre impulsado por el aumento de precios de las
-divisiones de Vivienda, agua, electricidad, gas y otros combustibles y
-Alimentos y bebidas no alcohólicas, que explicaron alrededor del 22.7 y
-21 por ciento de la inflación respectivamente</strong> (Cuadros 1 y 2).
-En comparación, la tasa de inflación mensual oficial publicada por el
-INDEC fue de 2.8 por ciento (Cuadro 1 y Figura 1). El aumento de la
-inflación oficial estuvo motorizado por las divisiones Alimentos, y
-Bebidas no Alcohólicas y Transporte, que explicaron alrededor del 48 por
-ciento de la inflación de diciembre.</p>
+<div id="inflación-actualizada" class="section level3">
+<h3>Inflación Actualizada</h3>
+<p><strong>El nivel general del Índice de Precios al Consumidor
+Actualizado (IPCA) aumentó un 2.7 por ciento en enero, luego de haber
+aumentado un 2.8 por ciento en diciembre impulsado por el aumento de
+precios de las divisiones de Alimentos y bebidas no alcohólicas y
+Vivienda, agua, electricidad, gas y otros combustibles, que explicaron
+alrededor del 37.3 y 16.6 por ciento de la inflación
+respectivamente</strong> (Cuadros 1 y 2). En comparación, la tasa de
+inflación mensual oficial publicada por el INDEC fue de 2.9 por ciento
+(Figura 1).</p>
 <p><strong>Durante los últimos 12 meses, la inflación interanual fue de
-33.6 por ciento, comparado con el valor de 31.5 por ciento en los datos
-oficiales</strong> (Cuadro 1 y Figura 2). La inflación latente
+32.1 por ciento, comparado con el valor de 32.4 por ciento en los datos
+oficiales</strong> (Cuadro 1 y Figura 2). La inflación actualizada
 interanual se explica por el aumento de precios de la división de
-Vivienda, Agua, Electricidad, Gas y Otros Combustibles mientras que la
-incidencia de la división de Alimentos y Bebidas no Alcohólicas explicó
-la mayor parte de la inflación interanual en la medición oficial.
+Alimentos y bebidas no alcohólicas, esta división también explicó la
+mayor parte de la inflación interanual en la medición oficial.
 <strong>Las divisiones de Vivienda, Agua, Electricidad, Gas y Otros
 Combustibles, Alimentos y Bebidas no Alcohólicas y Transporte explicaron
-alrededor del 57 por ciento del aumento interanual en el nivel general
-de la inflación latente</strong> (Cuadro 2). Mientras tanto, las mismas
-divisiones en la medición oficial explican alrededor del 53 por ciento,
-con un peso relativo de Alimentos y Bebidas no Alcohólicas mucho mayor,
-casi un 30 por ciento de la inflación interanual oficial.<br></p>
+alrededor del 50 por ciento del aumento interanual en el nivel general
+de la inflación actualizada</strong> (Cuadro 2). Mientras tanto, las
+mismas divisiones en la medición oficial explican alrededor del 55 por
+ciento, con un peso relativo de Alimentos y Bebidas no Alcohólicas mucho
+mayor, más de 30 por ciento de la inflación interanual oficial.<br></p>
 <p><span style="color:#777;font-size:13    .0pt;"><strong>Figura 1. Tasa
 de inflación mensual desde enero de 2024</strong></span></p>
-<div id="htmlwidget-758b9248f39f704ddcf0" style="width:768px;height:400px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-758b9248f39f704ddcf0">{"x":{"data":[{"x":[1704067200,1706745600,1709251200,1711929600,1714521600,1717200000,1719792000,1722470400,1725148800,1727740800,1730419200,1733011200,1735689600,1738368000,1740787200,1743465600,1746057600,1748736000,1751328000,1754006400,1756684800,1759276800,1761955200,1764547200],"y":[20.609999999999999,13.24,11.01,8.8300000000000001,4.1799999999999997,4.5800000000000001,4.0300000000000002,4.1699999999999999,3.4700000000000002,2.6899999999999999,2.4300000000000002,2.7000000000000002,2.21,2.3999999999999999,3.73,2.7799999999999998,1.5,1.6200000000000001,1.8999999999999999,1.8799999999999999,2.0800000000000001,2.3399999999999999,2.4700000000000002,2.8500000000000001],"text":["Fecha: 2024-01-01<br />Tasa: 20.61<br />Serie: INDEC","Fecha: 2024-02-01<br />Tasa: 13.24<br />Serie: INDEC","Fecha: 2024-03-01<br />Tasa: 11.01<br />Serie: INDEC","Fecha: 2024-04-01<br />Tasa:  8.83<br />Serie: INDEC","Fecha: 2024-05-01<br />Tasa:  4.18<br />Serie: INDEC","Fecha: 2024-06-01<br />Tasa:  4.58<br />Serie: INDEC","Fecha: 2024-07-01<br />Tasa:  4.03<br />Serie: INDEC","Fecha: 2024-08-01<br />Tasa:  4.17<br />Serie: INDEC","Fecha: 2024-09-01<br />Tasa:  3.47<br />Serie: INDEC","Fecha: 2024-10-01<br />Tasa:  2.69<br />Serie: INDEC","Fecha: 2024-11-01<br />Tasa:  2.43<br />Serie: INDEC","Fecha: 2024-12-01<br />Tasa:  2.70<br />Serie: INDEC","Fecha: 2025-01-01<br />Tasa:  2.21<br />Serie: INDEC","Fecha: 2025-02-01<br />Tasa:  2.40<br />Serie: INDEC","Fecha: 2025-03-01<br />Tasa:  3.73<br />Serie: INDEC","Fecha: 2025-04-01<br />Tasa:  2.78<br />Serie: INDEC","Fecha: 2025-05-01<br />Tasa:  1.50<br />Serie: INDEC","Fecha: 2025-06-01<br />Tasa:  1.62<br />Serie: INDEC","Fecha: 2025-07-01<br />Tasa:  1.90<br />Serie: INDEC","Fecha: 2025-08-01<br />Tasa:  1.88<br />Serie: INDEC","Fecha: 2025-09-01<br />Tasa:  2.08<br />Serie: INDEC","Fecha: 2025-10-01<br />Tasa:  2.34<br />Serie: INDEC","Fecha: 2025-11-01<br />Tasa:  2.47<br />Serie: INDEC","Fecha: 2025-12-01<br />Tasa:  2.85<br />Serie: INDEC"],"type":"scatter","mode":"lines","line":{"width":3.0236220472440949,"color":"rgba(17,28,127,1)","dash":"solid"},"hoveron":"points","name":"INDEC","legendgroup":"INDEC","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1704067200,1706745600,1709251200,1711929600,1714521600,1717200000,1719792000,1722470400,1725148800,1727740800,1730419200,1733011200,1735689600,1738368000,1740787200,1743465600,1746057600,1748736000,1751328000,1754006400,1756684800,1759276800,1761955200,1764547200],"y":[21.329999999999998,14.33,11.720000000000001,10.970000000000001,4.2699999999999996,5.5499999999999998,4.1600000000000001,4.54,3.7999999999999998,2.8700000000000001,2.7599999999999998,3.0800000000000001,2.3900000000000001,2.6299999999999999,3.5699999999999998,2.6000000000000001,1.6799999999999999,1.8999999999999999,2.0499999999999998,2.0899999999999999,2.2999999999999998,2.4199999999999999,2.6699999999999999,2.98],"text":["Fecha: 2024-01-01<br />Tasa: 21.33<br />Serie: IPC Latente","Fecha: 2024-02-01<br />Tasa: 14.33<br />Serie: IPC Latente","Fecha: 2024-03-01<br />Tasa: 11.72<br />Serie: IPC Latente","Fecha: 2024-04-01<br />Tasa: 10.97<br />Serie: IPC Latente","Fecha: 2024-05-01<br />Tasa:  4.27<br />Serie: IPC Latente","Fecha: 2024-06-01<br />Tasa:  5.55<br />Serie: IPC Latente","Fecha: 2024-07-01<br />Tasa:  4.16<br />Serie: IPC Latente","Fecha: 2024-08-01<br />Tasa:  4.54<br />Serie: IPC Latente","Fecha: 2024-09-01<br />Tasa:  3.80<br />Serie: IPC Latente","Fecha: 2024-10-01<br />Tasa:  2.87<br />Serie: IPC Latente","Fecha: 2024-11-01<br />Tasa:  2.76<br />Serie: IPC Latente","Fecha: 2024-12-01<br />Tasa:  3.08<br />Serie: IPC Latente","Fecha: 2025-01-01<br />Tasa:  2.39<br />Serie: IPC Latente","Fecha: 2025-02-01<br />Tasa:  2.63<br />Serie: IPC Latente","Fecha: 2025-03-01<br />Tasa:  3.57<br />Serie: IPC Latente","Fecha: 2025-04-01<br />Tasa:  2.60<br />Serie: IPC Latente","Fecha: 2025-05-01<br />Tasa:  1.68<br />Serie: IPC Latente","Fecha: 2025-06-01<br />Tasa:  1.90<br />Serie: IPC Latente","Fecha: 2025-07-01<br />Tasa:  2.05<br />Serie: IPC Latente","Fecha: 2025-08-01<br />Tasa:  2.09<br />Serie: IPC Latente","Fecha: 2025-09-01<br />Tasa:  2.30<br />Serie: IPC Latente","Fecha: 2025-10-01<br />Tasa:  2.42<br />Serie: IPC Latente","Fecha: 2025-11-01<br />Tasa:  2.67<br />Serie: IPC Latente","Fecha: 2025-12-01<br />Tasa:  2.98<br />Serie: IPC Latente"],"type":"scatter","mode":"lines","line":{"width":3.0236220472440949,"color":"rgba(144,209,75,1)","dash":"solid"},"hoveron":"points","name":"IPC Latente","legendgroup":"IPC Latente","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000],"y":[21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21],"text":["Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:"],"hovertext":["as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 21"],"textfont":{"size":14.66456692913386,"color":"rgba(0,0,0,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000],"y":[19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999,19.949999999999999],"text":["Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025","Diciembre 2025"],"hovertext":["as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 19.95"],"textfont":{"size":14.66456692913386,"color":"rgba(0,0,0,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000],"y":[18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999,18.899999999999999],"text":["INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8","INDEC:  2.8"],"hovertext":["as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 18.9"],"textfont":{"size":14.66456692913386,"color":"rgba(17,28,127,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000],"y":[17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001,17.850000000000001],"text":["IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0","IPC Latente:  3.0"],"hovertext":["as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 17.85"],"textfont":{"size":14.66456692913386,"color":"rgba(144,209,75,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":44.054794520547958,"r":7.3059360730593621,"b":58.009132420091348,"l":37.260273972602747},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1701043200,1767571200],"tickmode":"array","ticktext":["2024-01","2024-07","2025-01","2025-07","2026-01"],"tickvals":[1704067200,1719792000,1735689600,1751328000,1767225600],"categoryorder":"array","categoryarray":["2024-01","2024-07","2025-01","2025-07","2026-01"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":" ","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.50850000000000006,22.321499999999997],"tickmode":"array","ticktext":["5","10","15","20"],"tickvals":[5,10,15,20],"categoryorder":"array","categoryarray":["5","10","15","20"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Tasa de inflación mensual","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","layer":"below","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Serie","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","height":400,"barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"40b4432c3eab":{"x":{},"y":{},"colour":{},"type":"scatter"},"40b4438914d4":{"x":{},"y":{}},"40b46f71698d":{"x":{},"y":{}},"40b43d0f1dfd":{"x":{},"y":{}},"40b4460215f6":{"x":{},"y":{}}},"cur_data":"40b4432c3eab","visdat":{"40b4432c3eab":["function (y) ","x"],"40b4438914d4":["function (y) ","x"],"40b46f71698d":["function (y) ","x"],"40b43d0f1dfd":["function (y) ","x"],"40b4460215f6":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-<p><strong>Durante diciembre, casi todas las regiones registraron una
-tasa de inflación latente mayor a la medición oficial, con diferencias
-entre 0.12 y 0.19 puntos porcentuales.</strong> La mayor diferencia se
-dio en la región GBA donde la tasa de inflación latente fue 0.19 puntos
-porcentuales más alta que la medición oficial, seguida de la región
-Noroeste con una diferencia de 0.17 puntos porcentuales, seguido de la
-región Patagonia, donde dicha discreapancia fue de 0.14 puntos
-porcentuales. Para la región Noreste la tasa de inflación latente fue
-0.12 puntos porcentuales mayor a la medición oficial, mientras que para
-la región Pampeana la inflación latente superó por 0.11 puntos
-porcentuales a la medición oficial. Finalmente, en la región Cuyo la
-medición oficial superó a la tasa de inflación latente por 0.06 puntos
-porcentuales (Figura 2).<br></p>
+<div id="htmlwidget-93b6d0ee2c42eab5207c" style="width:768px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-93b6d0ee2c42eab5207c">{"x":{"data":[{"x":[1704067200,1706745600,1709251200,1711929600,1714521600,1717200000,1719792000,1722470400,1725148800,1727740800,1730419200,1733011200,1735689600,1738368000,1740787200,1743465600,1746057600,1748736000,1751328000,1754006400,1756684800,1759276800,1761955200,1764547200,1767225600],"y":[20.629999999999999,13.23,11,8.8399999999999999,4.1699999999999999,4.5800000000000001,4.0300000000000002,4.1699999999999999,3.4700000000000002,2.6899999999999999,2.4300000000000002,2.7000000000000002,2.21,2.3999999999999999,3.7200000000000002,2.7799999999999998,1.5,1.6200000000000001,1.8999999999999999,1.8799999999999999,2.0800000000000001,2.3399999999999999,2.4700000000000002,2.8500000000000001,2.8799999999999999],"text":["Fecha: 2024-01-01<br />Tasa: 20.63<br />Serie: INDEC","Fecha: 2024-02-01<br />Tasa: 13.23<br />Serie: INDEC","Fecha: 2024-03-01<br />Tasa: 11.00<br />Serie: INDEC","Fecha: 2024-04-01<br />Tasa:  8.84<br />Serie: INDEC","Fecha: 2024-05-01<br />Tasa:  4.17<br />Serie: INDEC","Fecha: 2024-06-01<br />Tasa:  4.58<br />Serie: INDEC","Fecha: 2024-07-01<br />Tasa:  4.03<br />Serie: INDEC","Fecha: 2024-08-01<br />Tasa:  4.17<br />Serie: INDEC","Fecha: 2024-09-01<br />Tasa:  3.47<br />Serie: INDEC","Fecha: 2024-10-01<br />Tasa:  2.69<br />Serie: INDEC","Fecha: 2024-11-01<br />Tasa:  2.43<br />Serie: INDEC","Fecha: 2024-12-01<br />Tasa:  2.70<br />Serie: INDEC","Fecha: 2025-01-01<br />Tasa:  2.21<br />Serie: INDEC","Fecha: 2025-02-01<br />Tasa:  2.40<br />Serie: INDEC","Fecha: 2025-03-01<br />Tasa:  3.72<br />Serie: INDEC","Fecha: 2025-04-01<br />Tasa:  2.78<br />Serie: INDEC","Fecha: 2025-05-01<br />Tasa:  1.50<br />Serie: INDEC","Fecha: 2025-06-01<br />Tasa:  1.62<br />Serie: INDEC","Fecha: 2025-07-01<br />Tasa:  1.90<br />Serie: INDEC","Fecha: 2025-08-01<br />Tasa:  1.88<br />Serie: INDEC","Fecha: 2025-09-01<br />Tasa:  2.08<br />Serie: INDEC","Fecha: 2025-10-01<br />Tasa:  2.34<br />Serie: INDEC","Fecha: 2025-11-01<br />Tasa:  2.47<br />Serie: INDEC","Fecha: 2025-12-01<br />Tasa:  2.85<br />Serie: INDEC","Fecha: 2026-01-01<br />Tasa:  2.88<br />Serie: INDEC"],"type":"scatter","mode":"lines","line":{"width":3.0236220472440949,"color":"rgba(17,28,127,1)","dash":"solid"},"hoveron":"points","name":"INDEC","legendgroup":"INDEC","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1704067200,1706745600,1709251200,1711929600,1714521600,1717200000,1719792000,1722470400,1725148800,1727740800,1730419200,1733011200,1735689600,1738368000,1740787200,1743465600,1746057600,1748736000,1751328000,1754006400,1756684800,1759276800,1761955200,1764547200,1767225600],"y":[20.629999999999999,13.23,11,8.8399999999999999,4.1699999999999999,4.5800000000000001,4.0300000000000002,4.1699999999999999,3.4700000000000002,2.6899999999999999,2.4300000000000002,2.7000000000000002,2.21,2.3999999999999999,3.7200000000000002,2.7799999999999998,1.5,1.6200000000000001,1.8999999999999999,1.8799999999999999,2.0800000000000001,2.3399999999999999,2.4700000000000002,2.8500000000000001,2.7000000000000002],"text":["Fecha: 2024-01-01<br />Tasa: 20.63<br />Serie: IPCA","Fecha: 2024-02-01<br />Tasa: 13.23<br />Serie: IPCA","Fecha: 2024-03-01<br />Tasa: 11.00<br />Serie: IPCA","Fecha: 2024-04-01<br />Tasa:  8.84<br />Serie: IPCA","Fecha: 2024-05-01<br />Tasa:  4.17<br />Serie: IPCA","Fecha: 2024-06-01<br />Tasa:  4.58<br />Serie: IPCA","Fecha: 2024-07-01<br />Tasa:  4.03<br />Serie: IPCA","Fecha: 2024-08-01<br />Tasa:  4.17<br />Serie: IPCA","Fecha: 2024-09-01<br />Tasa:  3.47<br />Serie: IPCA","Fecha: 2024-10-01<br />Tasa:  2.69<br />Serie: IPCA","Fecha: 2024-11-01<br />Tasa:  2.43<br />Serie: IPCA","Fecha: 2024-12-01<br />Tasa:  2.70<br />Serie: IPCA","Fecha: 2025-01-01<br />Tasa:  2.21<br />Serie: IPCA","Fecha: 2025-02-01<br />Tasa:  2.40<br />Serie: IPCA","Fecha: 2025-03-01<br />Tasa:  3.72<br />Serie: IPCA","Fecha: 2025-04-01<br />Tasa:  2.78<br />Serie: IPCA","Fecha: 2025-05-01<br />Tasa:  1.50<br />Serie: IPCA","Fecha: 2025-06-01<br />Tasa:  1.62<br />Serie: IPCA","Fecha: 2025-07-01<br />Tasa:  1.90<br />Serie: IPCA","Fecha: 2025-08-01<br />Tasa:  1.88<br />Serie: IPCA","Fecha: 2025-09-01<br />Tasa:  2.08<br />Serie: IPCA","Fecha: 2025-10-01<br />Tasa:  2.34<br />Serie: IPCA","Fecha: 2025-11-01<br />Tasa:  2.47<br />Serie: IPCA","Fecha: 2025-12-01<br />Tasa:  2.85<br />Serie: IPCA","Fecha: 2026-01-01<br />Tasa:  2.70<br />Serie: IPCA"],"type":"scatter","mode":"lines","line":{"width":3.0236220472440949,"color":"rgba(144,209,75,1)","dash":"solid"},"hoveron":"points","name":"IPCA","legendgroup":"IPCA","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000],"y":[19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19],"text":["Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:","Última observación:"],"hovertext":["as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3: 19"],"textfont":{"size":14.66456692913386,"color":"rgba(0,0,0,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000],"y":[18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001,18.050000000000001],"text":["Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026","Enero 2026"],"hovertext":["as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 1 * step_text_fg3: 18.05"],"textfont":{"size":14.66456692913386,"color":"rgba(0,0,0,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000],"y":[16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999,16.149999999999999],"text":["IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7","IPC Actualizado:  2.7"],"hovertext":["as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 3 * step_text_fg3: 16.15"],"textfont":{"size":14.66456692913386,"color":"rgba(144,209,75,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000,1730430000],"y":[17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001,17.100000000000001],"text":["INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9","INDEC:  2.9"],"hovertext":["as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1","as.POSIXct(\"2024-11-01\"): 2024-11-01<br />max_text_fg3 - 2 * step_text_fg3: 17.1"],"textfont":{"size":14.66456692913386,"color":"rgba(17,28,127,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":44.054794520547958,"r":7.3059360730593621,"b":58.009132420091348,"l":37.260273972602747},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1700909280,1770383520],"tickmode":"array","ticktext":["2024-01","2024-07","2025-01","2025-07","2026-01"],"tickvals":[1704067200,1719792000,1735689600,1751328000,1767225600],"categoryorder":"array","categoryarray":["2024-01","2024-07","2025-01","2025-07","2026-01"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":" ","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.54349999999999998,21.586499999999997],"tickmode":"array","ticktext":["5","10","15","20"],"tickvals":[5,10,15,20],"categoryorder":"array","categoryarray":["5","10","15","20"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Tasa de inflación mensual","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","layer":"below","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Serie","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","height":400,"barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"24404f17f64":{"x":{},"y":{},"colour":{},"type":"scatter"},"2440198d4b7a":{"x":{},"y":{}},"24401da873ab":{"x":{},"y":{}},"24403eac1e7e":{"x":{},"y":{}},"24404ba285c":{"x":{},"y":{}}},"cur_data":"24404f17f64","visdat":{"24404f17f64":["function (y) ","x"],"2440198d4b7a":["function (y) ","x"],"24401da873ab":["function (y) ","x"],"24403eac1e7e":["function (y) ","x"],"24404ba285c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p><strong>Durante enero, el comportamiento de las regiones fue dispar
+al comparar la tasa de inflación actualizada y la medición
+oficial.</strong> La región Noreste ha sido la única cuya medición
+actualizada ha superado a la inflación oficial, dicha discrepancia fue
+de 0.2 puntos porcentuales. Las regiones Cuyo, Patagonia y Noroeste
+presentaron valores de inflación iguales en la medición actualizada y la
+oficial, situándose, en ambos casos, en 3.0, 2.9 y 2.8 por ciento
+respectivamente. Finalmente, las regiones GBA y Pampeana exhibieron
+mediciones actualizadas inferiores a los valores oficiales, la
+diferencia fue de 0.3 y 0.2 puntos porcentuales respectivamente. (Figura
+2).<br></p>
 <p><span style="color:#777;font-size:13    .0pt;"><strong>Figura 2. Tasa
-de inflación mensual e interanual. Oficial y Latente</strong></span></p>
-<div id="htmlwidget-162b104cbcb4b49ee99e" style="width:768px;height:400px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-162b104cbcb4b49ee99e">{"x":{"data":[{"orientation":"v","width":[0.59999999999999964,0.59999999999999964,0.59999999999999964,0.59999999999999964,0.59999999999999987,0.60000000000000009],"base":[0,0,0,0,0,0],"x":[7,6,5,3,2,1],"y":[2.5709516684351064,2.6059554098943671,2.7926969731880025,2.9144995117684314,2.9574402417337442,3.3753408828728571],"text":["Region: Patagonia <br>Inflación INDEC: 2.6","Region: Noroeste <br>Inflación INDEC: 2.6","Region: GBA <br>Inflación INDEC: 2.8","Region: Pampeana <br>Inflación INDEC: 2.9","Region: Cuyo <br>Inflación INDEC: 3.0","Region: Noreste <br>Inflación INDEC: 3.4"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(17,28,127,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"0","legendgroup":"0","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":0.59999999999999964,"base":0,"x":[4],"y":[2.8452719345717137],"text":"Region: Total Nacional <br>Inflación INDEC: 2.8","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(77,87,176,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"1","legendgroup":"1","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[7,6,5,4,3,2,1],"y":[2.7104884175930044,2.7799582469235196,2.9864552936180289,2.9804790570336692,3.0219572818373619,2.9012813481050559,3.4921225921422439],"text":["Region: Patagonia <br>Inflación IPCL: 2.7","Region: Noroeste <br>Inflación IPCL: 2.8","Region: GBA <br>Inflación IPCL: 3.0","Region: Total Nacional <br>Inflación IPCL: 3.0","Region: Pampeana <br>Inflación IPCL: 3.0","Region: Cuyo <br>Inflación IPCL: 2.9","Region: Noreste <br>Inflación IPCL: 3.5"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(144,209,75,1)","opacity":1,"size":18.897637795275593,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(144,209,75,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":61.589041095890423,"r":7.3059360730593621,"b":58.009132420091348,"l":43.105022831050242},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Tasa de inflación mensual por región","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0.5,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,7.5999999999999996],"tickmode":"array","ticktext":["Noreste","Cuyo","Pampeana","Total Nacional","GBA","Noroeste","Patagonia"],"tickvals":[1,2,3,4.0000000000000009,5,6,7],"categoryorder":"array","categoryarray":["Noreste","Cuyo","Pampeana","Total Nacional","GBA","Noroeste","Patagonia"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Región","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.19960612960711221,4.1917287217493557],"tickmode":"array","ticktext":["0.0","1.0","2.0","3.0","4.0"],"tickvals":[-2.7755575615628914e-17,1,1.9999999999999996,3,3.9999999999999996],"categoryorder":"array","categoryarray":["0.0","1.0","2.0","3.0","4.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Puntos porcentuales","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","layer":"below","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","height":400,"barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"40b4530732a9":{"x":{},"text":{},"y":{},"fill":{},"type":"bar"},"40b410617951":{"x":{},"text":{},"y":{}}},"cur_data":"40b4530732a9","visdat":{"40b4530732a9":["function (y) ","x"],"40b410617951":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-<div id="htmlwidget-bf96f16dcc0bb0e4bc8b" style="width:768px;height:400px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-bf96f16dcc0bb0e4bc8b">{"x":{"data":[{"orientation":"v","width":[20,20,20,20,20,20,20,20,20,20,20,20,null,null],"base":[0,0,0,0,0,0,0,0,0,0,0,0,null,null],"x":[20089,20120,20148,20179,20209,20240,20270,20301,20332,20362,20393,20423,null,null],"y":[84.537508150823854,66.874146421804141,55.930015699373079,47.260263669660475,43.478660882509089,39.420121921411933,36.566544858649941,33.555932750613174,31.757557076022437,31.30875634960908,31.368193533748425,31.548760512645725,null,null],"text":["Mes: 2025-01-01 <br>Inflación INDEC: 84.5","Mes: 2025-02-01 <br>Inflación INDEC: 66.9","Mes: 2025-03-01 <br>Inflación INDEC: 55.9","Mes: 2025-04-01 <br>Inflación INDEC: 47.3","Mes: 2025-05-01 <br>Inflación INDEC: 43.5","Mes: 2025-06-01 <br>Inflación INDEC: 39.4","Mes: 2025-07-01 <br>Inflación INDEC: 36.6","Mes: 2025-08-01 <br>Inflación INDEC: 33.6","Mes: 2025-09-01 <br>Inflación INDEC: 31.8","Mes: 2025-10-01 <br>Inflación INDEC: 31.3","Mes: 2025-11-01 <br>Inflación INDEC: 31.4","Mes: 2025-12-01 <br>Inflación INDEC: 31.5","Mes: NA <br>Inflación INDEC: NA","Mes: NA <br>Inflación INDEC: NA"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(17,28,127,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[20089,20120,20148,20179,20209,20240,20270,20301,20332,20362,20393,20423,null,null],"y":[96.689785995183612,76.570235440951521,63.697060164583831,51.348579768964761,47.59867170212928,42.498220297378488,39.61239817135791,36.340315463625302,34.377378265081646,33.791520168523469,33.676474085031558,33.553831872767923,null,null],"text":["Mes: 2025-01-01 <br>Inflación IPCL: 96.7","Mes: 2025-02-01 <br>Inflación IPCL: 76.6","Mes: 2025-03-01 <br>Inflación IPCL: 63.7","Mes: 2025-04-01 <br>Inflación IPCL: 51.3","Mes: 2025-05-01 <br>Inflación IPCL: 47.6","Mes: 2025-06-01 <br>Inflación IPCL: 42.5","Mes: 2025-07-01 <br>Inflación IPCL: 39.6","Mes: 2025-08-01 <br>Inflación IPCL: 36.3","Mes: 2025-09-01 <br>Inflación IPCL: 34.4","Mes: 2025-10-01 <br>Inflación IPCL: 33.8","Mes: 2025-11-01 <br>Inflación IPCL: 33.7","Mes: 2025-12-01 <br>Inflación IPCL: 33.6","Mes: NA <br>Inflación IPCL: NA","Mes: NA <br>Inflación IPCL: NA"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(144,209,75,1)","opacity":1,"size":18.897637795275593,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(144,209,75,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":61.589041095890423,"r":7.3059360730593621,"b":58.009132420091348,"l":43.105022831050242},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Tasa de inflación interanual","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0.5,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[20061.299999999999,20450.700000000001],"tickmode":"array","ticktext":["ene 2025","abr 2025","jul 2025","oct 2025"],"tickvals":[20089,20179,20270,20362],"categoryorder":"array","categoryarray":["ene 2025","abr 2025","jul 2025","oct 2025"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Fecha","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-4.8344892997591806,101.5242752949428],"tickmode":"array","ticktext":["0","25","50","75","100"],"tickvals":[0,25,50,75,100],"categoryorder":"array","categoryarray":["0","25","50","75","100"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Puntos porcentuales","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","layer":"below","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","height":400,"barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"40b4236c31e9":{"x":{},"y":{},"text":{},"type":"bar"},"40b45f364d6e":{"x":{},"y":{},"text":{}}},"cur_data":"40b4236c31e9","visdat":{"40b4236c31e9":["function (y) ","x"],"40b45f364d6e":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-<p><strong>El índice de precios de Transporte fue el que más aumentó en
-el mes, con un incremento de 4.1 por ciento.</strong> En el segundo
-lugar de los aumentos esta el índice de precios latente de Vivienda,
-agua, electricidad, gas y otros combustibles, cuyo incremento fue de 3.4
-por ciento. En tercer lugar, con un aumento de 3.3 por ciento, se ubica
-el índice de Comunicación y, con 3.2 por ciento, Alimentos y bebidas no
-alcohólicas se situa en cuarto lugar (Cuadro 1).</p>
-<p><strong>El índice de precios de Educación fue el índice que registró
-la variación más baja, con un incremento de 0.4 por ciento.</strong>
-Luego, el menor aumento fue el del índice de precios de Prendas de
-vestir y calzado, cuyo aumento en la medición latente fue de 1.1 por
-ciento (Cuadro 1).<br></p>
+de inflación mensual e interanual. Oficial y
+Actualizada</strong></span></p>
+<div id="htmlwidget-3be220e10e835415fc49" style="width:768px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3be220e10e835415fc49">{"x":{"data":[{"orientation":"v","width":[0.59999999999999964,0.59999999999999964,0.59999999999999964,0.59999999999999964,0.59999999999999987,0.60000000000000009],"base":[0,0,0,0,0,0],"x":[7,6,5,3,2,1],"y":[2.7687249645246048,2.8487894970014693,2.8795886311703267,2.8977124695207301,2.9857530006762945,3.835417670172836],"text":["Region: GBA <br>Inflación INDEC: 2.8","Region: Noroeste <br>Inflación INDEC: 2.8","Region: Patagonia <br>Inflación INDEC: 2.9","Region: Pampeana <br>Inflación INDEC: 2.9","Region: Cuyo <br>Inflación INDEC: 3.0","Region: Noreste <br>Inflación INDEC: 3.8"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(17,28,127,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"0","legendgroup":"0","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":0.59999999999999964,"base":0,"x":[4],"y":[2.881619353661713],"text":"Region: Total Nacional <br>Inflación INDEC: 2.9","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(77,87,176,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"1","legendgroup":"1","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[7,6,5,4,3,2,1],"y":[2.5068662311096057,2.7871844328808848,2.9462917264989619,2.7014883446081273,2.6818441828592388,2.9696397843603117,3.9516270984847335],"text":["Region: GBA <br>Inflación IPCA: 2.5","Region: Noroeste <br>Inflación IPCA: 2.8","Region: Patagonia <br>Inflación IPCA: 2.9","Region: Total Nacional <br>Inflación IPCA: 2.7","Region: Pampeana <br>Inflación IPCA: 2.7","Region: Cuyo <br>Inflación IPCA: 3.0","Region: Noreste <br>Inflación IPCA: 4.0"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(144,209,75,1)","opacity":1,"size":18.897637795275593,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(144,209,75,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":61.589041095890423,"r":7.3059360730593621,"b":58.009132420091348,"l":43.105022831050242},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Tasa de inflación mensual por región","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0.5,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,7.5999999999999996],"tickmode":"array","ticktext":["Noreste","Cuyo","Pampeana","Total Nacional","Patagonia","Noroeste","GBA"],"tickvals":[1,2,3,4.0000000000000009,5,6,7],"categoryorder":"array","categoryarray":["Noreste","Cuyo","Pampeana","Total Nacional","Patagonia","Noroeste","GBA"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Región","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.2225813549242367,4.6742084534089701],"tickmode":"array","ticktext":["0.0","1.0","2.0","3.0","4.0"],"tickvals":[0,0.99999999999999989,2,3,4],"categoryorder":"array","categoryarray":["0.0","1.0","2.0","3.0","4.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Puntos porcentuales","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","layer":"below","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","height":400,"barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"244048384b79":{"x":{},"text":{},"y":{},"fill":{},"type":"bar"},"24407f061b62":{"x":{},"text":{},"y":{}}},"cur_data":"244048384b79","visdat":{"244048384b79":["function (y) ","x"],"24407f061b62":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-333c7d76281be0abf2c9" style="width:768px;height:400px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-333c7d76281be0abf2c9">{"x":{"data":[{"orientation":"v","width":[20,20,20,20,20,20,20,20,20,20,20,20,null,null],"base":[0,0,0,0,0,0,0,0,0,0,0,0,null,null],"x":[20120,20148,20179,20209,20240,20270,20301,20332,20362,20393,20423,20454,null,null],"y":[66.874146421804141,55.930015699373079,47.260263669660475,43.478660882509089,39.420121921411933,36.566544858649941,33.555932750613174,31.757557076022437,31.30875634960908,31.368193533748425,31.548760512645725,32.411806438953541,null,null],"text":["Mes: 2025-02-01 <br>Inflación INDEC: 66.9","Mes: 2025-03-01 <br>Inflación INDEC: 55.9","Mes: 2025-04-01 <br>Inflación INDEC: 47.3","Mes: 2025-05-01 <br>Inflación INDEC: 43.5","Mes: 2025-06-01 <br>Inflación INDEC: 39.4","Mes: 2025-07-01 <br>Inflación INDEC: 36.6","Mes: 2025-08-01 <br>Inflación INDEC: 33.6","Mes: 2025-09-01 <br>Inflación INDEC: 31.8","Mes: 2025-10-01 <br>Inflación INDEC: 31.3","Mes: 2025-11-01 <br>Inflación INDEC: 31.4","Mes: 2025-12-01 <br>Inflación INDEC: 31.5","Mes: 2026-01-01 <br>Inflación INDEC: 32.4","Mes: NA <br>Inflación INDEC: NA","Mes: NA <br>Inflación INDEC: NA"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(17,28,127,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[20120,20148,20179,20209,20240,20270,20301,20332,20362,20393,20423,20454,null,null],"y":[66.875319615256458,55.932639557872335,47.258332154455076,43.480783245764052,39.4134178501915,36.561408735062038,33.550451842990725,31.754716182611119,31.305503226092178,31.365642760309886,31.548554675654206,32.142177728560249,null,null],"text":["Mes: 2025-02-01 <br>Inflación IPCA: 66.9","Mes: 2025-03-01 <br>Inflación IPCA: 55.9","Mes: 2025-04-01 <br>Inflación IPCA: 47.3","Mes: 2025-05-01 <br>Inflación IPCA: 43.5","Mes: 2025-06-01 <br>Inflación IPCA: 39.4","Mes: 2025-07-01 <br>Inflación IPCA: 36.6","Mes: 2025-08-01 <br>Inflación IPCA: 33.6","Mes: 2025-09-01 <br>Inflación IPCA: 31.8","Mes: 2025-10-01 <br>Inflación IPCA: 31.3","Mes: 2025-11-01 <br>Inflación IPCA: 31.4","Mes: 2025-12-01 <br>Inflación IPCA: 31.5","Mes: 2026-01-01 <br>Inflación IPCA: 32.1","Mes: NA <br>Inflación IPCA: NA","Mes: NA <br>Inflación IPCA: NA"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(144,209,75,1)","opacity":1,"size":18.897637795275593,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(144,209,75,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":61.589041095890423,"r":7.3059360730593621,"b":58.009132420091348,"l":37.260273972602747},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Tasa de inflación interanual","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0.5,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[20092.299999999999,20481.700000000001],"tickmode":"array","ticktext":["abr 2025","jul 2025","oct 2025","ene 2026"],"tickvals":[20179,20270,20362,20454],"categoryorder":"array","categoryarray":["abr 2025","jul 2025","oct 2025","ene 2026"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Fecha","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-3.3437659807628233,70.219085596019283],"tickmode":"array","ticktext":["0","20","40","60"],"tickvals":[0,20,40,60],"categoryorder":"array","categoryarray":["0","20","40","60"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Puntos porcentuales","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","layer":"below","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","height":400,"barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"24403fc5ef8":{"x":{},"y":{},"text":{},"type":"bar"},"24405c0c7a25":{"x":{},"y":{},"text":{}}},"cur_data":"24403fc5ef8","visdat":{"24403fc5ef8":["function (y) ","x"],"24405c0c7a25":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p><strong>El índice de precios de Alimentos y bebidas no alcohólicas
+fue el que más aumentó en el mes, con un incremento de 4.6 por
+ciento.</strong> En el segundo lugar de los aumentos esta el índice de
+precios actualizado de Restaurantes y hoteles, cuyo incremento fue de
+4.1 por ciento. En un segundo escalón pueden identificarse las
+divisiones de Comunicación y Vivienda, agua, electricidad, gas y otros
+combustibles, cuyos incrementos fueron de 3.6 y 3.0 por ciento
+respectivamente (Cuadro 1).</p>
+<p><strong>El índice de precios de Prendas de vestir y calzado fue el
+índice que registró la variación más baja, con una disminución de 0.4
+por ciento.</strong> Luego, el menor aumento fue el del índice de
+precios de Educación, cuyo aumento en la medición actualizada fue de 0.6
+por ciento (Cuadro 1).<br></p>
 <hr />
 <p><br></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
-<strong>Cuadro 1. Cambios porcentuales en el IPC Latente</strong>
+<strong>Cuadro 1. Cambios porcentuales en el IPC Actualizado</strong>
 </caption>
 <thead>
 <tr>
 <th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-Inflación Latente
+Inflación Actualizada
 </div>
 </th>
 <th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="6">
@@ -3819,22 +3826,24 @@ Variación interanual
 Año
 </div>
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="6">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="5">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 2025
 </div>
 </th>
 <th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-Dic 2025 / Dic 2024
+2026
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Ene 2026 / Ene 2025
 </div>
 </th>
 </tr>
 <tr>
 <th style="text-align:left;">
-</th>
-<th style="text-align:center;">
-Jul. 
 </th>
 <th style="text-align:center;">
 Ago.
@@ -3852,16 +3861,19 @@ Nov. 
 Dic.
 </th>
 <th style="text-align:center;">
+Ene.
+</th>
+<th style="text-align:center;">
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left;font-weight: bold;vertical- align:middle;">
-IPCse Nacional
+IPC Actualizado
 </td>
 <td style="text-align:center;font-weight: bold;vertical- align:middle;">
-2.1
+1.9
 </td>
 <td style="text-align:center;font-weight: bold;vertical- align:middle;">
 2.1
@@ -3870,16 +3882,16 @@ IPCse Nacional
 2.3
 </td>
 <td style="text-align:center;font-weight: bold;vertical- align:middle;">
-2.4
+2.5
+</td>
+<td style="text-align:center;font-weight: bold;vertical- align:middle;">
+2.8
 </td>
 <td style="text-align:center;font-weight: bold;vertical- align:middle;">
 2.7
 </td>
 <td style="text-align:center;font-weight: bold;vertical- align:middle;">
-3.0
-</td>
-<td style="text-align:center;font-weight: bold;vertical- align:middle;">
-33.6
+32.1
 </td>
 </tr>
 <tr grouplength="6">
@@ -3895,65 +3907,10 @@ GBA
 1.9
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.0
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.3
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.4
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.7
-</td>
-<td style="text-align:center;vertical- align:middle;">
-3.0
-</td>
-<td style="text-align:center;vertical- align:middle;">
-33.0
-</td>
-</tr>
-<tr>
-<td style="text-align:left;padding-left: 2em;vertical- align:middle;" indentlevel="1">
-Pampeana
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.3
-</td>
-<td style="text-align:center;vertical- align:middle;">
 2.1
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.3
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.5
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.6
-</td>
-<td style="text-align:center;vertical- align:middle;">
-3.0
-</td>
-<td style="text-align:center;vertical- align:middle;">
-34.0
-</td>
-</tr>
-<tr>
-<td style="text-align:left;padding-left: 2em;vertical- align:middle;" indentlevel="1">
-Noroeste
-</td>
-<td style="text-align:center;vertical- align:middle;">
-1.9
-</td>
-<td style="text-align:center;vertical- align:middle;">
 2.4
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.4
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.2
 </td>
 <td style="text-align:center;vertical- align:middle;">
 2.5
@@ -3962,7 +3919,62 @@ Noroeste
 2.8
 </td>
 <td style="text-align:center;vertical- align:middle;">
-33.1
+2.5
+</td>
+<td style="text-align:center;vertical- align:middle;">
+32.5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;padding-left: 2em;vertical- align:middle;" indentlevel="1">
+Pampeana
+</td>
+<td style="text-align:center;vertical- align:middle;">
+1.8
+</td>
+<td style="text-align:center;vertical- align:middle;">
+2.0
+</td>
+<td style="text-align:center;vertical- align:middle;">
+2.3
+</td>
+<td style="text-align:center;vertical- align:middle;">
+2.5
+</td>
+<td style="text-align:center;vertical- align:middle;">
+2.9
+</td>
+<td style="text-align:center;vertical- align:middle;">
+2.7
+</td>
+<td style="text-align:center;vertical- align:middle;">
+32.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;padding-left: 2em;vertical- align:middle;" indentlevel="1">
+Noroeste
+</td>
+<td style="text-align:center;vertical- align:middle;">
+2.0
+</td>
+<td style="text-align:center;vertical- align:middle;">
+2.2
+</td>
+<td style="text-align:center;vertical- align:middle;">
+2.1
+</td>
+<td style="text-align:center;vertical- align:middle;">
+2.3
+</td>
+<td style="text-align:center;vertical- align:middle;">
+2.6
+</td>
+<td style="text-align:center;vertical- align:middle;">
+2.8
+</td>
+<td style="text-align:center;vertical- align:middle;">
+30.8
 </td>
 </tr>
 <tr>
@@ -3970,13 +3982,10 @@ Noroeste
 Noreste
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.0
+1.7
 </td>
 <td style="text-align:center;vertical- align:middle;">
-1.9
-</td>
-<td style="text-align:center;vertical- align:middle;">
-1.9
+1.8
 </td>
 <td style="text-align:center;vertical- align:middle;">
 2.2
@@ -3985,10 +3994,13 @@ Noreste
 2.4
 </td>
 <td style="text-align:center;vertical- align:middle;">
-3.5
+3.4
 </td>
 <td style="text-align:center;vertical- align:middle;">
-30.6
+4.0
+</td>
+<td style="text-align:center;vertical- align:middle;">
+31.7
 </td>
 </tr>
 <tr>
@@ -3999,22 +4011,22 @@ Cuyo
 2.1
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.4
+2.2
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.4
+2.3
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.6
+2.8
 </td>
 <td style="text-align:center;vertical- align:middle;">
-3.1
+3.0
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.9
+3.0
 </td>
 <td style="text-align:center;vertical- align:middle;">
-33.3
+31.7
 </td>
 </tr>
 <tr>
@@ -4022,25 +4034,25 @@ Cuyo
 Patagonia
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.3
+2.0
+</td>
+<td style="text-align:center;vertical- align:middle;">
+2.4
+</td>
+<td style="text-align:center;vertical- align:middle;">
+2.4
 </td>
 <td style="text-align:center;vertical- align:middle;">
 2.3
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.7
+2.6
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.8
+2.9
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.8
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.7
-</td>
-<td style="text-align:center;vertical- align:middle;">
-37.6
+32.3
 </td>
 </tr>
 <tr grouplength="12">
@@ -4053,25 +4065,25 @@ Patagonia
 Alimentos y bebidas no alcohólicas
 </td>
 <td style="text-align:center;vertical- align:middle;">
-1.9
-</td>
-<td style="text-align:center;vertical- align:middle;">
 1.4
 </td>
 <td style="text-align:center;vertical- align:middle;">
-1.8
+1.9
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.2
+2.3
 </td>
 <td style="text-align:center;vertical- align:middle;">
 2.8
 </td>
 <td style="text-align:center;vertical- align:middle;">
-3.2
+3.1
 </td>
 <td style="text-align:center;vertical- align:middle;">
-32.5
+4.6
+</td>
+<td style="text-align:center;vertical- align:middle;">
+27.2
 </td>
 </tr>
 <tr>
@@ -4079,25 +4091,25 @@ Alimentos y bebidas no alcohólicas
 Bebidas alcohólicas y tabaco
 </td>
 <td style="text-align:center;vertical- align:middle;">
-0.6
+3.5
 </td>
 <td style="text-align:center;vertical- align:middle;">
-3.1
+1.6
 </td>
 <td style="text-align:center;vertical- align:middle;">
-1.5
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.2
+2.4
 </td>
 <td style="text-align:center;vertical- align:middle;">
 1.2
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.6
+2.8
 </td>
 <td style="text-align:center;vertical- align:middle;">
-23.7
+1.5
+</td>
+<td style="text-align:center;vertical- align:middle;">
+64.6
 </td>
 </tr>
 <tr>
@@ -4105,10 +4117,7 @@ Bebidas alcohólicas y tabaco
 Prendas de vestir y calzado
 </td>
 <td style="text-align:center;vertical- align:middle;">
--0.7
-</td>
-<td style="text-align:center;vertical- align:middle;">
--0.2
+-0.3
 </td>
 <td style="text-align:center;vertical- align:middle;">
 2.0
@@ -4117,13 +4126,16 @@ Prendas de vestir y calzado
 2.4
 </td>
 <td style="text-align:center;vertical- align:middle;">
-0.6
+0.5
 </td>
 <td style="text-align:center;vertical- align:middle;">
 1.1
 </td>
 <td style="text-align:center;vertical- align:middle;">
-15.4
+-0.4
+</td>
+<td style="text-align:center;vertical- align:middle;">
+39.6
 </td>
 </tr>
 <tr>
@@ -4131,33 +4143,30 @@ Prendas de vestir y calzado
 Vivienda, agua, electricidad, gas y otros combustibles
 </td>
 <td style="text-align:center;vertical- align:middle;">
-1.6
-</td>
-<td style="text-align:center;vertical- align:middle;">
 2.7
 </td>
 <td style="text-align:center;vertical- align:middle;">
-3.2
+3.1
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.9
-</td>
-<td style="text-align:center;vertical- align:middle;">
-3.5
+2.8
 </td>
 <td style="text-align:center;vertical- align:middle;">
 3.4
 </td>
 <td style="text-align:center;vertical- align:middle;">
-42.2
+3.4
+</td>
+<td style="text-align:center;vertical- align:middle;">
+3.0
+</td>
+<td style="text-align:center;vertical- align:middle;">
+38.0
 </td>
 </tr>
 <tr>
 <td style="text-align:left;padding-left: 2em;vertical- align:middle;" indentlevel="1">
 Equipamiento y mantenimiento del hogar
-</td>
-<td style="text-align:center;vertical- align:middle;">
-1.5
 </td>
 <td style="text-align:center;vertical- align:middle;">
 0.9
@@ -4175,15 +4184,15 @@ Equipamiento y mantenimiento del hogar
 2.0
 </td>
 <td style="text-align:center;vertical- align:middle;">
-19.3
+1.8
+</td>
+<td style="text-align:center;vertical- align:middle;">
+37.7
 </td>
 </tr>
 <tr>
 <td style="text-align:left;padding-left: 2em;vertical- align:middle;" indentlevel="1">
 Salud
-</td>
-<td style="text-align:center;vertical- align:middle;">
-1.2
 </td>
 <td style="text-align:center;vertical- align:middle;">
 1.7
@@ -4201,7 +4210,10 @@ Salud
 2.1
 </td>
 <td style="text-align:center;vertical- align:middle;">
-28.3
+2.3
+</td>
+<td style="text-align:center;vertical- align:middle;">
+12.6
 </td>
 </tr>
 <tr>
@@ -4209,33 +4221,30 @@ Salud
 Transporte
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.8
-</td>
-<td style="text-align:center;vertical- align:middle;">
-3.7
-</td>
-<td style="text-align:center;vertical- align:middle;">
-3.1
-</td>
-<td style="text-align:center;vertical- align:middle;">
-3.4
+3.6
 </td>
 <td style="text-align:center;vertical- align:middle;">
 3.0
 </td>
 <td style="text-align:center;vertical- align:middle;">
-4.1
+3.5
 </td>
 <td style="text-align:center;vertical- align:middle;">
-32.3
+3.0
+</td>
+<td style="text-align:center;vertical- align:middle;">
+4.0
+</td>
+<td style="text-align:center;vertical- align:middle;">
+1.9
+</td>
+<td style="text-align:center;vertical- align:middle;">
+28.9
 </td>
 </tr>
 <tr>
 <td style="text-align:left;padding-left: 2em;vertical- align:middle;" indentlevel="1">
 Comunicación
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.3
 </td>
 <td style="text-align:center;vertical- align:middle;">
 1.9
@@ -4253,7 +4262,10 @@ Comunicación
 3.3
 </td>
 <td style="text-align:center;vertical- align:middle;">
-35.0
+3.6
+</td>
+<td style="text-align:center;vertical- align:middle;">
+50.7
 </td>
 </tr>
 <tr>
@@ -4261,10 +4273,7 @@ Comunicación
 Recreación y cultura
 </td>
 <td style="text-align:center;vertical- align:middle;">
-4.8
-</td>
-<td style="text-align:center;vertical- align:middle;">
-0.6
+0.5
 </td>
 <td style="text-align:center;vertical- align:middle;">
 1.3
@@ -4279,7 +4288,10 @@ Recreación y cultura
 2.5
 </td>
 <td style="text-align:center;vertical- align:middle;">
-30.3
+1.1
+</td>
+<td style="text-align:center;vertical- align:middle;">
+41.5
 </td>
 </tr>
 <tr>
@@ -4287,33 +4299,30 @@ Recreación y cultura
 Educación
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.0
+2.5
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.8
-</td>
-<td style="text-align:center;vertical- align:middle;">
-3.0
+3.1
 </td>
 <td style="text-align:center;vertical- align:middle;">
 1.7
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.1
+2.2
 </td>
 <td style="text-align:center;vertical- align:middle;">
 0.4
 </td>
 <td style="text-align:center;vertical- align:middle;">
-54.3
+0.6
+</td>
+<td style="text-align:center;vertical- align:middle;">
+75.9
 </td>
 </tr>
 <tr>
 <td style="text-align:left;padding-left: 2em;vertical- align:middle;" indentlevel="1">
 Restaurantes y hoteles
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.8
 </td>
 <td style="text-align:center;vertical- align:middle;">
 3.4
@@ -4325,13 +4334,16 @@ Restaurantes y hoteles
 2.2
 </td>
 <td style="text-align:center;vertical- align:middle;">
-2.4
+2.5
 </td>
 <td style="text-align:center;vertical- align:middle;">
-3.1
+3.2
 </td>
 <td style="text-align:center;vertical- align:middle;">
-42.2
+4.1
+</td>
+<td style="text-align:center;vertical- align:middle;">
+16.9
 </td>
 </tr>
 <tr>
@@ -4339,13 +4351,10 @@ Restaurantes y hoteles
 Bienes y servicios varios
 </td>
 <td style="text-align:center;vertical- align:middle;">
+2.2
+</td>
+<td style="text-align:center;vertical- align:middle;">
 2.1
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.2
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.2
 </td>
 <td style="text-align:center;vertical- align:middle;">
 2.4
@@ -4357,38 +4366,10 @@ Bienes y servicios varios
 2.6
 </td>
 <td style="text-align:center;vertical- align:middle;">
-32.8
-</td>
-</tr>
-<tr grouplength="1">
-<td colspan="8" style="border-bottom: 1px solid;">
-<strong>INDEC</strong>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;padding-left: 2em;vertical- align:middle;" indentlevel="1">
-INDEC Nivel General - Nacional
+2.7
 </td>
 <td style="text-align:center;vertical- align:middle;">
-1.9
-</td>
-<td style="text-align:center;vertical- align:middle;">
-1.9
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.1
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.3
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.5
-</td>
-<td style="text-align:center;vertical- align:middle;">
-2.8
-</td>
-<td style="text-align:center;vertical- align:middle;">
-31.5
+36.4
 </td>
 </tr>
 </tbody>
@@ -4405,43 +4386,41 @@ Precios al Consumidor y Encuesta Nacional de Gastos de los Hogares
 <p><br></p>
 <hr />
 </div>
-<div id="incidencias-diciembre-2025" class="section level3">
-<h3>Incidencias diciembre 2025</h3>
+<div id="incidencias-enero-2026" class="section level3">
+<h3>Incidencias enero 2026</h3>
 <p><strong>La contribución más importante al dato del nivel general del
-IPCL de diciembre la hizo el índice de precios de la división Vivienda,
-agua, electricidad, gas y otros combustibles explicando alrededor de 23
-por ciento del 3 por ciento de inflación.</strong> Esta división explicó
-alrededor del 25 por ciento de la inflación experimentada en las
-regiones Patagonia y GBA, y más del 20 por ciento en las regiones
-Noreste y Pampeana. En Cuyo y Noroeste esta división explicó más del 15
-por ciento de la tasa de inflación latente. La división Alimentos y
-bebidas no alcohólicas fue la segunda divisón con mayor incidencia a
-nivel nacional, explicó más del 20 por ciento de la inflación. Este
-índice tuvo la mayor incidencia en la inflación latente en las regiones
-Cuyo, Pampeana, Noroeste y Noreste, explicando entre 22.8 y 36.8 por
-ciento del IPCL. Esta división también fue relevante para explicar la
-inflación latente de las regiones restantes, situandose en el tercer
-lugar de importancia en GBA y Patagonia. Por último, se destaca la
-divisón Transporte con una incidencia de entre 17.6 y 26.1 por ciento en
-todas las regiones. Estas tres divisiones explican más de 63 por ciento
-de la inflación del mes de diciembre (Cuadro 2). <br></p>
-<p><strong>En la comparación interanual, diciembre de 2025 contra
-diciembre de 2024, más del 57 por ciento del aumento de 33.6 por ciento
-está explicado por los índices de precios de tres de las divisiones de
-la canasta: Vivienda, Agua, Electricidad, Gas y Otros Combustibles,
-Alimentos y Bebidas no Alcohólicas y Transporte.</strong> Cada una de
-estas divisiones contribuyó 7.99, 6.37 y 4.80 puntos porcentuales,
-respectivamente. Restaurantes y Hoteles, con 2.7 puntos porcentuales y
-Recreación y Cultura, con una incidencia interanual de 2.4 puntos
-porcentuales, son las divisiones que le siguen en la explicación del
-aumento interanual del nivel general de precios latente (Cuadro
-2).<br></p>
+IPCA de enero la hizo el índice de precios de la división Alimentos y
+bebidas no alcohólicas explicando alrededor de 37.3 por ciento del 2.7
+por ciento de inflación.</strong> Esta división también representó la
+mayor contribución al incremento en el índice de precios actualizado de
+casi todas las regiones, explicando entre el 30 por ciento en la región
+Cuyo hasta el 42 por ciento en la región Noroeste. Para la región
+Patagonia, la mayor contribución provino de la división Vivienda, agua,
+electricidad, gas y otros combustibles representó explicando el 26.5 por
+ciento de la inflación actualizada del mes. Esta división fue la segunda
+contribución más importante en las regiones Noroeste, explicando más un
+tercio de la inflación actualizada, y Pampeana, cuya incidencia fue
+superior al 18 por ciento. También se destaca la contribución de la
+división Transporte, contribuyendo entre 6.7 por ciento en la región
+Noreste hasta 26.3 por ciento en Cuyo. Estas 3 divisiones explican más
+de 64 por ciento de la inflación del mes de enero (Cuadro 2). <br></p>
+<p><strong>En la comparación interanual, enero de 2026 contra enero de
+2025, más del 50 por ciento del aumento de 32.1 por ciento está
+explicado por los índices de precios de tres de las divisiones de la
+canasta: Alimentos y bebidas no alcohólicas, Vivienda, agua,
+electricidad, gas y otros combustibles y Transporte.</strong> Cada una
+de estas divisiones contribuyó 6.24, 5.49 y 4.37 puntos porcentuales,
+respectivamente. Recreación y cultura, con 3.3 puntos porcentuales y
+Prendas de vestir y calzado junto con Comunicaciones, cada una con una
+incidencia interanual de 2.4 puntos porcentuales, son las divisiones que
+le siguen en la explicación del aumento interanual del nivel general de
+precios actualizado (Cuadro 2).<br></p>
 <hr />
 <p><br></p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <strong>Cuadro 2. Incidencia de cada división en la Inflación
-Latente</strong>
+Actualizada</strong>
 </caption>
 <thead>
 <tr>
@@ -4481,25 +4460,25 @@ Nacional
 Nivel general
 </td>
 <td style="text-align:center;font-weight: bold;">
-2.99
+2.51
 </td>
 <td style="text-align:center;font-weight: bold;">
-3.02
+2.68
 </td>
 <td style="text-align:center;font-weight: bold;">
-2.78
+2.79
 </td>
 <td style="text-align:center;font-weight: bold;">
-3.49
+3.95
 </td>
 <td style="text-align:center;font-weight: bold;">
-2.90
+2.97
 </td>
 <td style="text-align:center;font-weight: bold;">
-2.71
+2.95
 </td>
 <td style="text-align:center;font-weight: bold;">
-2.98
+2.70
 </td>
 </tr>
 <tr>
@@ -4507,25 +4486,25 @@ Nivel general
 Alimentos y bebidas no alcohólicas
 </td>
 <td style="text-align:center;">
-0.49
+1.01
 </td>
 <td style="text-align:center;">
-0.70
+0.99
 </td>
 <td style="text-align:center;">
-0.94
+1.17
 </td>
 <td style="text-align:center;">
-1.28
+1.44
 </td>
 <td style="text-align:center;">
-0.66
+0.90
 </td>
 <td style="text-align:center;">
-0.51
+0.64
 </td>
 <td style="text-align:center;">
-0.63
+1.01
 </td>
 </tr>
 <tr>
@@ -4533,25 +4512,25 @@ Alimentos y bebidas no alcohólicas
 Bebidas alcohólicas y tabaco
 </td>
 <td style="text-align:center;">
-0.05
+0.02
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+0.03
+</td>
+<td style="text-align:center;">
+0.03
 </td>
 <td style="text-align:center;">
 0.05
 </td>
 <td style="text-align:center;">
 0.03
-</td>
-<td style="text-align:center;">
-0.04
-</td>
-<td style="text-align:center;">
-0.04
-</td>
-<td style="text-align:center;">
-0.03
-</td>
-<td style="text-align:center;">
-0.04
 </td>
 </tr>
 <tr>
@@ -4559,25 +4538,25 @@ Bebidas alcohólicas y tabaco
 Prendas de vestir y calzado
 </td>
 <td style="text-align:center;">
-0.05
+-0.08
 </td>
 <td style="text-align:center;">
-0.05
+0.03
 </td>
 <td style="text-align:center;">
-0.04
+0.00
 </td>
 <td style="text-align:center;">
-0.04
+0.08
 </td>
 <td style="text-align:center;">
-0.07
+-0.01
 </td>
 <td style="text-align:center;">
-0.05
+0.09
 </td>
 <td style="text-align:center;">
-0.05
+-0.03
 </td>
 </tr>
 <tr>
@@ -4585,30 +4564,36 @@ Prendas de vestir y calzado
 Vivienda, agua, electricidad, gas y otros combustibles
 </td>
 <td style="text-align:center;">
-0.73
+0.32
 </td>
 <td style="text-align:center;">
-0.68
+0.49
 </td>
 <td style="text-align:center;">
-0.46
+0.34
 </td>
 <td style="text-align:center;">
-0.72
+1.33
 </td>
 <td style="text-align:center;">
-0.50
+0.26
 </td>
 <td style="text-align:center;">
-0.72
+0.78
 </td>
 <td style="text-align:center;">
-0.68
+0.45
 </td>
 </tr>
 <tr>
 <td style="text-align:left;padding-left: 2em;" indentlevel="1">
 Equipamiento y mantenimiento del hogar
+</td>
+<td style="text-align:center;">
+0.08
+</td>
+<td style="text-align:center;">
+0.11
 </td>
 <td style="text-align:center;">
 0.10
@@ -4617,19 +4602,13 @@ Equipamiento y mantenimiento del hogar
 0.08
 </td>
 <td style="text-align:center;">
-0.07
-</td>
-<td style="text-align:center;">
-0.08
+0.12
 </td>
 <td style="text-align:center;">
 0.11
 </td>
 <td style="text-align:center;">
-0.04
-</td>
-<td style="text-align:center;">
-0.09
+0.10
 </td>
 </tr>
 <tr>
@@ -4637,25 +4616,25 @@ Equipamiento y mantenimiento del hogar
 Salud
 </td>
 <td style="text-align:center;">
-0.17
+0.15
+</td>
+<td style="text-align:center;">
+0.16
 </td>
 <td style="text-align:center;">
 0.13
 </td>
 <td style="text-align:center;">
-0.09
+0.08
 </td>
 <td style="text-align:center;">
-0.06
+0.14
 </td>
 <td style="text-align:center;">
-0.11
+0.12
 </td>
 <td style="text-align:center;">
-0.07
-</td>
-<td style="text-align:center;">
-0.13
+0.15
 </td>
 </tr>
 <tr>
@@ -4663,25 +4642,25 @@ Salud
 Transporte
 </td>
 <td style="text-align:center;">
-0.60
+0.18
 </td>
 <td style="text-align:center;">
-0.53
+0.28
 </td>
 <td style="text-align:center;">
-0.70
+0.40
 </td>
 <td style="text-align:center;">
-0.64
+0.26
 </td>
 <td style="text-align:center;">
-0.64
+0.78
 </td>
 <td style="text-align:center;">
-0.71
+0.46
 </td>
 <td style="text-align:center;">
-0.60
+0.28
 </td>
 </tr>
 <tr>
@@ -4689,13 +4668,13 @@ Transporte
 Comunicación
 </td>
 <td style="text-align:center;">
-0.23
+0.20
 </td>
 <td style="text-align:center;">
-0.19
+0.18
 </td>
 <td style="text-align:center;">
-0.16
+0.17
 </td>
 <td style="text-align:center;">
 0.20
@@ -4704,10 +4683,10 @@ Comunicación
 0.17
 </td>
 <td style="text-align:center;">
-0.19
+0.22
 </td>
 <td style="text-align:center;">
-0.20
+0.19
 </td>
 </tr>
 <tr>
@@ -4715,25 +4694,25 @@ Comunicación
 Recreación y cultura
 </td>
 <td style="text-align:center;">
-0.21
+0.08
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+0.18
+</td>
+<td style="text-align:center;">
+0.13
 </td>
 <td style="text-align:center;">
 0.22
 </td>
 <td style="text-align:center;">
-0.07
+0.24
 </td>
 <td style="text-align:center;">
-0.20
-</td>
-<td style="text-align:center;">
-0.20
-</td>
-<td style="text-align:center;">
-0.15
-</td>
-<td style="text-align:center;">
-0.20
+0.09
 </td>
 </tr>
 <tr>
@@ -4741,22 +4720,22 @@ Recreación y cultura
 Educación
 </td>
 <td style="text-align:center;">
--0.02
+0.03
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.02
+</td>
+<td style="text-align:center;">
+0.01
 </td>
 <td style="text-align:center;">
 0.03
 </td>
 <td style="text-align:center;">
-0.04
-</td>
-<td style="text-align:center;">
--0.04
-</td>
-<td style="text-align:center;">
-0.05
-</td>
-<td style="text-align:center;">
-0.03
+0.00
 </td>
 <td style="text-align:center;">
 0.02
@@ -4767,25 +4746,25 @@ Educación
 Restaurantes y hoteles
 </td>
 <td style="text-align:center;">
+0.36
+</td>
+<td style="text-align:center;">
+0.25
+</td>
+<td style="text-align:center;">
 0.20
 </td>
 <td style="text-align:center;">
-0.27
-</td>
-<td style="text-align:center;">
-0.12
+0.20
 </td>
 <td style="text-align:center;">
 0.18
 </td>
 <td style="text-align:center;">
-0.24
+0.13
 </td>
 <td style="text-align:center;">
-0.09
-</td>
-<td style="text-align:center;">
-0.22
+0.28
 </td>
 </tr>
 <tr>
@@ -4793,25 +4772,25 @@ Restaurantes y hoteles
 Bienes y servicios varios
 </td>
 <td style="text-align:center;">
-0.18
-</td>
-<td style="text-align:center;">
-0.09
-</td>
-<td style="text-align:center;">
-0.07
-</td>
-<td style="text-align:center;">
-0.09
-</td>
-<td style="text-align:center;">
-0.12
+0.14
 </td>
 <td style="text-align:center;">
 0.11
 </td>
 <td style="text-align:center;">
-0.13
+0.05
+</td>
+<td style="text-align:center;">
+0.09
+</td>
+<td style="text-align:center;">
+0.16
+</td>
+<td style="text-align:center;">
+0.11
+</td>
+<td style="text-align:center;">
+0.12
 </td>
 </tr>
 <tr>
@@ -4842,25 +4821,25 @@ Bienes y servicios varios
 Nivel general
 </td>
 <td style="text-align:center;font-weight: bold;">
-33.01
+32.48
 </td>
 <td style="text-align:center;font-weight: bold;">
-34.04
+32.03
 </td>
 <td style="text-align:center;font-weight: bold;">
-33.15
+30.78
 </td>
 <td style="text-align:center;font-weight: bold;">
-30.62
+31.71
 </td>
 <td style="text-align:center;font-weight: bold;">
-33.29
+31.75
 </td>
 <td style="text-align:center;font-weight: bold;">
-37.63
+32.29
 </td>
 <td style="text-align:center;font-weight: bold;">
-33.55
+32.14
 </td>
 </tr>
 <tr>
@@ -4868,25 +4847,25 @@ Nivel general
 Alimentos y bebidas no alcohólicas
 </td>
 <td style="text-align:center;">
-5.92
+5.77
 </td>
 <td style="text-align:center;">
-6.33
+6.06
 </td>
 <td style="text-align:center;">
-8.55
+9.15
 </td>
 <td style="text-align:center;">
-8.48
+10.24
 </td>
 <td style="text-align:center;">
-6.79
+6.56
 </td>
 <td style="text-align:center;">
-5.16
+4.62
 </td>
 <td style="text-align:center;">
-6.37
+6.24
 </td>
 </tr>
 <tr>
@@ -4894,25 +4873,25 @@ Alimentos y bebidas no alcohólicas
 Bebidas alcohólicas y tabaco
 </td>
 <td style="text-align:center;">
-0.41
+0.92
 </td>
 <td style="text-align:center;">
-0.51
+1.14
 </td>
 <td style="text-align:center;">
-0.28
+0.69
 </td>
 <td style="text-align:center;">
-0.34
+0.86
 </td>
 <td style="text-align:center;">
-0.43
+1.13
 </td>
 <td style="text-align:center;">
-0.50
+1.18
 </td>
 <td style="text-align:center;">
-0.44
+1.00
 </td>
 </tr>
 <tr>
@@ -4920,25 +4899,25 @@ Bebidas alcohólicas y tabaco
 Prendas de vestir y calzado
 </td>
 <td style="text-align:center;">
-0.67
+1.88
 </td>
 <td style="text-align:center;">
-0.87
+2.59
 </td>
 <td style="text-align:center;">
-1.05
+3.23
 </td>
 <td style="text-align:center;">
-0.81
+3.02
 </td>
 <td style="text-align:center;">
-0.85
+2.91
 </td>
 <td style="text-align:center;">
-1.03
+2.78
 </td>
 <td style="text-align:center;">
-0.80
+2.35
 </td>
 </tr>
 <tr>
@@ -4946,25 +4925,25 @@ Prendas de vestir y calzado
 Vivienda, agua, electricidad, gas y otros combustibles
 </td>
 <td style="text-align:center;">
-7.02
+6.16
 </td>
 <td style="text-align:center;">
-8.87
+6.57
 </td>
 <td style="text-align:center;">
-6.77
+0.13
 </td>
 <td style="text-align:center;">
-6.80
+2.51
 </td>
 <td style="text-align:center;">
-7.80
+3.39
 </td>
 <td style="text-align:center;">
-12.97
+5.68
 </td>
 <td style="text-align:center;">
-7.99
+5.49
 </td>
 </tr>
 <tr>
@@ -4972,25 +4951,25 @@ Vivienda, agua, electricidad, gas y otros combustibles
 Equipamiento y mantenimiento del hogar
 </td>
 <td style="text-align:center;">
-0.97
+2.05
 </td>
 <td style="text-align:center;">
-0.89
+1.82
 </td>
 <td style="text-align:center;">
-0.82
+1.82
 </td>
 <td style="text-align:center;">
-0.64
+1.72
 </td>
 <td style="text-align:center;">
-1.00
+1.88
 </td>
 <td style="text-align:center;">
-0.99
+1.66
 </td>
 <td style="text-align:center;">
-0.92
+1.92
 </td>
 </tr>
 <tr>
@@ -4998,25 +4977,25 @@ Equipamiento y mantenimiento del hogar
 Salud
 </td>
 <td style="text-align:center;">
-2.07
+1.43
 </td>
 <td style="text-align:center;">
-1.93
+0.71
 </td>
 <td style="text-align:center;">
-1.47
+0.58
 </td>
 <td style="text-align:center;">
-1.04
+0.29
 </td>
 <td style="text-align:center;">
-1.59
+0.29
 </td>
 <td style="text-align:center;">
-1.37
+0.63
 </td>
 <td style="text-align:center;">
-1.86
+0.95
 </td>
 </tr>
 <tr>
@@ -5024,25 +5003,25 @@ Salud
 Transporte
 </td>
 <td style="text-align:center;">
-4.90
+4.99
 </td>
 <td style="text-align:center;">
-4.35
+3.59
 </td>
 <td style="text-align:center;">
-5.06
+4.94
 </td>
 <td style="text-align:center;">
-4.64
+1.68
 </td>
 <td style="text-align:center;">
-5.28
+4.74
 </td>
 <td style="text-align:center;">
-5.72
+4.44
 </td>
 <td style="text-align:center;">
-4.80
+4.37
 </td>
 </tr>
 <tr>
@@ -5050,25 +5029,25 @@ Transporte
 Comunicación
 </td>
 <td style="text-align:center;">
-2.27
+2.32
 </td>
 <td style="text-align:center;">
-2.00
+2.28
 </td>
 <td style="text-align:center;">
-1.90
+2.01
 </td>
 <td style="text-align:center;">
-2.23
+2.45
 </td>
 <td style="text-align:center;">
-1.91
+2.51
 </td>
 <td style="text-align:center;">
-2.36
+3.40
 </td>
 <td style="text-align:center;">
-2.14
+2.35
 </td>
 </tr>
 <tr>
@@ -5076,25 +5055,25 @@ Comunicación
 Recreación y cultura
 </td>
 <td style="text-align:center;">
-2.27
+2.81
 </td>
 <td style="text-align:center;">
-2.99
+4.00
 </td>
 <td style="text-align:center;">
-1.71
+2.75
 </td>
 <td style="text-align:center;">
-1.74
+2.79
 </td>
 <td style="text-align:center;">
-2.24
+3.53
 </td>
 <td style="text-align:center;">
-1.97
+4.03
 </td>
 <td style="text-align:center;">
-2.41
+3.29
 </td>
 </tr>
 <tr>
@@ -5102,25 +5081,25 @@ Recreación y cultura
 Educación
 </td>
 <td style="text-align:center;">
+1.94
+</td>
+<td style="text-align:center;">
+1.32
+</td>
+<td style="text-align:center;">
+1.35
+</td>
+<td style="text-align:center;">
+0.95
+</td>
+<td style="text-align:center;">
+2.11
+</td>
+<td style="text-align:center;">
 1.70
 </td>
 <td style="text-align:center;">
-1.07
-</td>
-<td style="text-align:center;">
-1.97
-</td>
-<td style="text-align:center;">
-0.96
-</td>
-<td style="text-align:center;">
-1.62
-</td>
-<td style="text-align:center;">
-1.86
-</td>
-<td style="text-align:center;">
-1.60
+1.76
 </td>
 </tr>
 <tr>
@@ -5128,25 +5107,25 @@ Educación
 Restaurantes y hoteles
 </td>
 <td style="text-align:center;">
-2.90
+1.49
 </td>
 <td style="text-align:center;">
-2.80
+1.44
 </td>
 <td style="text-align:center;">
-2.61
+0.68
 </td>
 <td style="text-align:center;">
-1.91
+1.30
 </td>
 <td style="text-align:center;">
-2.12
+0.53
 </td>
 <td style="text-align:center;">
-2.11
+0.65
 </td>
 <td style="text-align:center;">
-2.72
+1.30
 </td>
 </tr>
 <tr>
@@ -5154,25 +5133,25 @@ Restaurantes y hoteles
 Bienes y servicios varios
 </td>
 <td style="text-align:center;">
-1.91
+1.85
 </td>
 <td style="text-align:center;">
-1.42
+1.50
 </td>
 <td style="text-align:center;">
-0.96
+0.98
 </td>
 <td style="text-align:center;">
-1.03
-</td>
-<td style="text-align:center;">
-1.66
-</td>
-<td style="text-align:center;">
-1.57
+1.01
 </td>
 <td style="text-align:center;">
 1.60
+</td>
+<td style="text-align:center;">
+1.14
+</td>
+<td style="text-align:center;">
+1.57
 </td>
 </tr>
 </tbody>
@@ -5190,72 +5169,11 @@ general.
 </tfoot>
 </table>
 </div>
-<div id="ciudad-autónoma-de-buenos-aires-caba-vs.-gran-buenos-aires-gba" class="section level3">
-<h3>Ciudad Autónoma de Buenos Aires (CABA) vs. Gran Buenos Aires
-(GBA)</h3>
-<p>La tasa de inflación de CABA, que actualizó sus ponderadores con la
-ENGHo 2017-2018, fue de 2.7 por ciento en diciembre comparada con una
-tasa de inflación oficial para la región del GBA de 2.8 por ciento.
-¿Cómo se explican estos valores? Además del hecho resaltado arriba de
-precios de ciertos bienes y servicios que se relevan en CABA pero que no
-se relevan en ninguna de las otras dos mediciones, oficial y latente (ya
-dimos el ejemplo del precio del servicio de <em>streaming</em>, el
-alquiler de películas de video etc.) por usar diferentes ENGHo, la
-explicación también tiene que ver con la estructura de gastos de los
-hogares de CABA comparada con la estructura de gastos de la región del
-GBA, medida con la ENGHo 2004-2005 o la 2017-2018 y el cambio de precios
-en ambas jurisdicciones. <strong>Cuando se compara CABA con la inflación
-oficial de diciembre en GBA una diferencia en el aumento de precios se
-dió en la división de Recreación y Cultura donde la inflación alcanzó
-2.7 por ciento en la región del GBA mientras que tuvo una deflación de
--0.7 por ciento en CABA. Esto provocó una incidencia para los hogares de
-GBA de 0.19 puntos porcentuales mientras que para CABA los precios de
-esta división tuvieron una incidencia de -0.04 puntos porcentuales
-induciendo un aumento de la brecha entre la inflación de GBA y de CABA.
-La diferencia en las incidencias del mes se explica a pesar de que la
-estructura de gastos de los hogares para esta división es mayor para los
-hogares de CABA que para los de GBA. La segunda diferencia fue en la
-división Alimentos y Bebidas no Alcohólicas que tuvo una incidencia de
-0.66 puntos porcentuales en la región de GBA y solo 0.42 puntos
-porcentuales en CABA. Esta división también impulsó la inflación de GBA
-por encima de la de CABA.</strong></p>
-<p>La incidencia de la división de bebidas Alcohólicas y Tabaco fue casi
-nula en ambas jurisdicciones, explicando 0.07 puntos porcentuales en GBA
-y 0.04 puntos porcentuales en CABA. Prendas de vestir y calzado tuvo una
-incidencia de 0.09 puntos porcentuales en la región del GBA y de 0.04 en
-CABA. Transporte tuvo una incidencia de 0.49 puntos porcentuales en GBA
-y de 0.59 en CABA. En el resto de las divisiones el la incidencia
-durante diciembre fue similar en CABA y en GBA.</p>
-</div>
-<div id="gran-buenos-aires-gba-medición-oficial-vs.-latente" class="section level3">
-<h3>Gran Buenos Aires (GBA): medición oficial vs. latente</h3>
-<p><strong>La tasa de inflación latente en la región del GBA fue 0.2
-puntos porcentuales más alta que la medición oficial: 3.0 por ciento
-versus 2.8 por ciento.</strong> En este caso la explicación tiene que
-ver fundamentalmente con que la estructura de gasto de los hogares de la
-ENGHo 2017-2018 afectó mayormente las incidencias de los aumentos de
-precios de las diferentes divisiones que componen la canasta del índice
-durante diciembre. En los datos de la inflación latente de diciembre en
-GBA una división que incrementó sus precios por encima del nivel general
-fue Transporte, alrededor de 4.1 por ciento, y lo mismo ocurrió en la
-medición oficial (4.2 por ciento). Aun con inflaciones similares los
-diferentes ponderadores hicieron que la incidencia de esta división en
-el IPCL fuera de 0.60 puntos porcentuales comparado con 0.49 puntos
-porcentuales en la medición oficial. El índice de precios de la división
-Aimentos y Bebidas no Alcohólicas, que tiene un poderador de alrededor
-de 21 por ciento en el indicador latente y de 23 por ciento en el
-oficial, tuvo una inflación similar en ambos indicadores entre 2.6 y 2.7
-por ciento impactando de manera similar en la inflación con ponderadores
-actualizados que en la medición oficial. En la división de Bebidas
-Alcohólicas y Tabaco el efecto fue de alrededor de 3.0 en ambas
-mediciones. El aumento de precios de la división de Salud fue de
-alrededor del 2.4 en ambas mediciones.</p>
-</div>
 </div>
 <div id="nota-tecnica" class="section level2">
 <h2>NOTA TECNICA</h2>
-<div id="breve-explicación-del-ipc-latente" class="section level3">
-<h3>Breve explicación del IPC Latente</h3>
+<div id="breve-explicación-del-ipc-actualizado" class="section level3">
+<h3>Breve explicación del IPC Actualizado</h3>
 <p>El Índice de Precios al Consumidor (IPC) que publica mensualmente el
 Instituto de Estadística y Censos (INDEC) mide el cambio en los precios
 de una canasta de bienes y servicios adquiridos por los consumidores
@@ -5265,15 +5183,15 @@ vale 100. En Argentina, los datos oficiales utilizan la estructura de
 gastos de consumo de la Encuesta Nacional de Gasto de los Hogares
 (ENGHo) de 2004-2005, ajustada por precios relativos hasta la fecha de
 creación del índice.</p>
-<p>El IPC Latente se construye utilizando la Encuesta Nacional de Gasto
-de los Hogares de 2017-2018 y la información que publica el INDEC sobre
-las aperturas del Índice de Precios al Consumidor. En particular, con
-respecto a la información de los índices de precios se utiliza la
-información correspondiente a las divisiones. El IPC Latente usa 2023
-como el año base. Para computar el IPCL se utiliza las siguiente fórmula
-sobre las doce divisiones en cada región:</p>
+<p>El IPC Actualizado se construye utilizando la Encuesta Nacional de
+Gasto de los Hogares de 2017-2018 y la información que publica el INDEC
+sobre las aperturas del Índice de Precios al Consumidor. En particular,
+con respecto a la información de los índices de precios se utiliza la
+información correspondiente a las divisiones. El IPC Actualizado usa
+2025 como el año base. Para computar el IPCA se utiliza las siguiente
+fórmula sobre las doce divisiones en cada región:</p>
 <p><span class="math display">\[
-IPCL^{r,j}_t = \sum_{j=1}^{12}  w^{r,j}_{17} \cdot
+IPCA^{r,j}_t = \sum_{j=1}^{12}  w^{r,j}_{17} \cdot
 \frac{P^{r,j}_t}{P^{r,j}_{base}}
 \]</span> donde <span class="math inline">\(P^{r,j}_t\)</span> son los
 “precios” en cada región <span class="math inline">\(r\)</span> en el
@@ -5298,15 +5216,15 @@ su vez se computa ratio del gasto total por región con respecto al gasto
 total nacional para obtener el ponderador de cada región.</p>
 <p>Luego, se computan los índices a nivel nacional ponderando los datos
 de las regiones para cada división <span class="math inline">\(j\)</span> y para el Nivel General. <span class="math display">\[
-IPCL^j_t = \sum_{r=1}^{6}  w^{r,j}_{17} \cdot IPCL^{r,j}_t
+IPCA^j_t = \sum_{r=1}^{6}  w^{r,j}_{17} \cdot IPCA^{r,j}_t
 \]</span> Finalmente se calcula la tasa de inflación mensual para
 como</p>
 <p><span class="math display">\[
-1 + \pi_t = \frac{IPCL_t}{IPCL_{t-1}} -1
+1 + \pi_t = \frac{IPCA_t}{IPCA_{t-1}} -1
 \]</span> y de forma análoga para cada región y división.</p>
 <p>La elección del año base no es trivial, sino que afecta a los valores
 de la tasa de inflación resultante. En líneas generales, a partir de la
-ecuación que computa el <span class="math inline">\(IPCL^{r,j}\)</span>,
+ecuación que computa el <span class="math inline">\(IPCA^{r,j}\)</span>,
 se puede notar que el nivel de precios del año base tiene un efecto
 directo en el valor del índice. Esto ocurre por utilización de
 <em>ponderadores</em> para la construcción del índice en vez de un
